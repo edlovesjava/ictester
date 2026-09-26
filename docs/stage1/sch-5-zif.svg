@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1040" viewBox="0 0 1300 1040" font-family="DejaVu Sans, Arial, sans-serif"><rect width="100%" height="100%" fill="white"/><g stroke-width="1.8" stroke-linecap="round"><text x="30" y="42" font-size="22" text-anchor="start" font-weight="bold" fill="#000">Sheet 5 - ZIF-40 (chip inserted top-justified: pin 1 → ZIF 1)</text>
+<rect x="970" y="18" width="300" height="36" rx="5" fill="#eaf2fb" stroke="#000"/>
+<text x="1120" y="42" font-size="15" text-anchor="middle" font-weight="bold" fill="#000">block: zif</text>
+<rect x="520" y="110" width="260" height="780" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="650.0" y="482.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">J2</text>
+<text x="650.0" y="498.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">ZIF-40</text>
+<text x="650.0" y="514.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">universal</text>
+<text x="650.0" y="530.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">(0.3″ + 0.6″)</text>
+<polyline fill="none" stroke="#000" points="480,132 520,132"/>
+<text x="525" y="136" font-size="12" text-anchor="start" font-weight="normal" fill="#000">1</text>
+<polyline fill="none" stroke="#000" points="480,170 520,170"/>
+<text x="525" y="174" font-size="12" text-anchor="start" font-weight="normal" fill="#000">2</text>
+<polyline fill="none" stroke="#000" points="480,208 520,208"/>
+<text x="525" y="212" font-size="12" text-anchor="start" font-weight="normal" fill="#000">3</text>
+<polyline fill="none" stroke="#000" points="480,246 520,246"/>
+<text x="525" y="250" font-size="12" text-anchor="start" font-weight="normal" fill="#000">4</text>
+<polyline fill="none" stroke="#000" points="480,284 520,284"/>
+<text x="525" y="288" font-size="12" text-anchor="start" font-weight="normal" fill="#000">5</text>
+<polyline fill="none" stroke="#000" points="480,322 520,322"/>
+<text x="525" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#000">6</text>
+<polyline fill="none" stroke="#000" points="480,360 520,360"/>
+<text x="525" y="364" font-size="12" text-anchor="start" font-weight="normal" fill="#000">7</text>
+<polyline fill="none" stroke="#000" points="480,398 520,398"/>
+<text x="525" y="402" font-size="12" text-anchor="start" font-weight="normal" fill="#000">8</text>
+<polyline fill="none" stroke="#000" points="480,436 520,436"/>
+<text x="525" y="440" font-size="12" text-anchor="start" font-weight="normal" fill="#000">9</text>
+<polyline fill="none" stroke="#000" points="480,474 520,474"/>
+<text x="525" y="478" font-size="12" text-anchor="start" font-weight="normal" fill="#000">10</text>
+<polyline fill="none" stroke="#000" points="480,512 520,512"/>
+<text x="525" y="516" font-size="12" text-anchor="start" font-weight="normal" fill="#000">11</text>
+<polyline fill="none" stroke="#000" points="480,550 520,550"/>
+<text x="525" y="554" font-size="12" text-anchor="start" font-weight="normal" fill="#000">12</text>
+<polyline fill="none" stroke="#000" points="480,588 520,588"/>
+<text x="525" y="592" font-size="12" text-anchor="start" font-weight="normal" fill="#000">13</text>
+<polyline fill="none" stroke="#000" points="480,626 520,626"/>
+<text x="525" y="630" font-size="12" text-anchor="start" font-weight="normal" fill="#000">14</text>
+<polyline fill="none" stroke="#000" points="480,664 520,664"/>
+<text x="525" y="668" font-size="12" text-anchor="start" font-weight="normal" fill="#000">15</text>
+<polyline fill="none" stroke="#000" points="480,702 520,702"/>
+<text x="525" y="706" font-size="12" text-anchor="start" font-weight="normal" fill="#000">16</text>
+<polyline fill="none" stroke="#000" points="480,740 520,740"/>
+<text x="525" y="744" font-size="12" text-anchor="start" font-weight="normal" fill="#000">17</text>
+<polyline fill="none" stroke="#000" points="480,778 520,778"/>
+<text x="525" y="782" font-size="12" text-anchor="start" font-weight="normal" fill="#000">18</text>
+<polyline fill="none" stroke="#000" points="480,816 520,816"/>
+<text x="525" y="820" font-size="12" text-anchor="start" font-weight="normal" fill="#000">19</text>
+<polyline fill="none" stroke="#000" points="480,854 520,854"/>
+<text x="525" y="858" font-size="12" text-anchor="start" font-weight="normal" fill="#000">20</text>
+<polyline fill="none" stroke="#000" points="780,132 820,132"/>
+<text x="775" y="136" font-size="12" text-anchor="end" font-weight="normal" fill="#000">40</text>
+<polyline fill="none" stroke="#000" points="780,170 820,170"/>
+<text x="775" y="174" font-size="12" text-anchor="end" font-weight="normal" fill="#000">39</text>
+<polyline fill="none" stroke="#000" points="780,208 820,208"/>
+<text x="775" y="212" font-size="12" text-anchor="end" font-weight="normal" fill="#000">38</text>
+<polyline fill="none" stroke="#000" points="780,246 820,246"/>
+<text x="775" y="250" font-size="12" text-anchor="end" font-weight="normal" fill="#000">37</text>
+<polyline fill="none" stroke="#000" points="780,284 820,284"/>
+<text x="775" y="288" font-size="12" text-anchor="end" font-weight="normal" fill="#000">36</text>
+<polyline fill="none" stroke="#000" points="780,322 820,322"/>
+<text x="775" y="326" font-size="12" text-anchor="end" font-weight="normal" fill="#000">35</text>
+<polyline fill="none" stroke="#000" points="780,360 820,360"/>
+<text x="775" y="364" font-size="12" text-anchor="end" font-weight="normal" fill="#000">34</text>
+<polyline fill="none" stroke="#000" points="780,398 820,398"/>
+<text x="775" y="402" font-size="12" text-anchor="end" font-weight="normal" fill="#000">33</text>
+<polyline fill="none" stroke="#000" points="780,436 820,436"/>
+<text x="775" y="440" font-size="12" text-anchor="end" font-weight="normal" fill="#000">32</text>
+<polyline fill="none" stroke="#000" points="780,474 820,474"/>
+<text x="775" y="478" font-size="12" text-anchor="end" font-weight="normal" fill="#000">31</text>
+<polyline fill="none" stroke="#000" points="780,512 820,512"/>
+<text x="775" y="516" font-size="12" text-anchor="end" font-weight="normal" fill="#000">30</text>
+<polyline fill="none" stroke="#000" points="780,550 820,550"/>
+<text x="775" y="554" font-size="12" text-anchor="end" font-weight="normal" fill="#000">29</text>
+<polyline fill="none" stroke="#000" points="780,588 820,588"/>
+<text x="775" y="592" font-size="12" text-anchor="end" font-weight="normal" fill="#000">28</text>
+<polyline fill="none" stroke="#000" points="780,626 820,626"/>
+<text x="775" y="630" font-size="12" text-anchor="end" font-weight="normal" fill="#000">27</text>
+<polyline fill="none" stroke="#000" points="780,664 820,664"/>
+<text x="775" y="668" font-size="12" text-anchor="end" font-weight="normal" fill="#000">26</text>
+<polyline fill="none" stroke="#000" points="780,702 820,702"/>
+<text x="775" y="706" font-size="12" text-anchor="end" font-weight="normal" fill="#000">25</text>
+<polyline fill="none" stroke="#000" points="780,740 820,740"/>
+<text x="775" y="744" font-size="12" text-anchor="end" font-weight="normal" fill="#000">24</text>
+<polyline fill="none" stroke="#000" points="780,778 820,778"/>
+<text x="775" y="782" font-size="12" text-anchor="end" font-weight="normal" fill="#000">23</text>
+<polyline fill="none" stroke="#000" points="780,816 820,816"/>
+<text x="775" y="820" font-size="12" text-anchor="end" font-weight="normal" fill="#000">22</text>
+<polyline fill="none" stroke="#000" points="780,854 820,854"/>
+<text x="775" y="858" font-size="12" text-anchor="end" font-weight="normal" fill="#000">21</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,132 471,122 446.8,122 446.8,142 471,142"/>
+<text x="450.8" y="136" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z1</text>
+<text x="410" y="136" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA0 via 220 Ω   + VCC switch Q2</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,170 471,160 446.8,160 446.8,180 471,180"/>
+<text x="450.8" y="174" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z2</text>
+<text x="410" y="174" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA1 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,208 471,198 446.8,198 446.8,218 471,218"/>
+<text x="450.8" y="212" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z3</text>
+<text x="410" y="212" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA2 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,246 471,236 446.8,236 446.8,256 471,256"/>
+<text x="450.8" y="250" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z4</text>
+<text x="410" y="250" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA3 via 220 Ω   + VCC switch Q3</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,284 471,274 446.8,274 446.8,294 471,294"/>
+<text x="450.8" y="288" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z5</text>
+<text x="410" y="288" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA4 via 220 Ω   + VCC switch Q4</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,322 471,312 446.8,312 446.8,332 471,332"/>
+<text x="450.8" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z6</text>
+<text x="410" y="326" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA5 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,360 471,350 446.8,350 446.8,370 471,370"/>
+<text x="450.8" y="364" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z7</text>
+<text x="410" y="364" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPA6 via 220 Ω   + GND switch Q5</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,398 471,388 446.8,388 446.8,408 471,408"/>
+<text x="450.8" y="402" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z8</text>
+<text x="410" y="402" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPB0 via 220 Ω   + GND switch Q6</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,436 471,426 446.8,426 446.8,446 471,446"/>
+<text x="450.8" y="440" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z9</text>
+<text x="410" y="440" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPB1 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,474 471,464 439.2,464 439.2,484 471,484"/>
+<text x="443.2" y="478" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z10</text>
+<text x="410" y="478" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPB2 via 220 Ω   + GND switch Q7</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,512 471,502 439.2,502 439.2,522 471,522"/>
+<text x="443.2" y="516" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z11</text>
+<text x="410" y="516" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPB3 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="480,550 471,540 439.2,540 439.2,560 471,560"/>
+<text x="443.2" y="554" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z12</text>
+<text x="410" y="554" font-size="11" text-anchor="end" font-weight="normal" fill="#444">← U2 GPB4 via 220 Ω   + GND switch Q8</text>
+<text x="474" y="592" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="630" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="668" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="706" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="744" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="782" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="820" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<text x="474" y="858" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,132 829,122 860.8,122 860.8,142 829,142"/>
+<text x="832" y="136" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z40</text>
+<text x="890" y="136" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA0 via 220 Ω   + VCC switch Q1</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,170 829,160 860.8,160 860.8,180 829,180"/>
+<text x="832" y="174" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z39</text>
+<text x="890" y="174" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA1 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,208 829,198 860.8,198 860.8,218 829,218"/>
+<text x="832" y="212" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z38</text>
+<text x="890" y="212" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA2 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,246 829,236 860.8,236 860.8,256 829,256"/>
+<text x="832" y="250" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z37</text>
+<text x="890" y="250" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA3 via 220 Ω   + GND switch Q10</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,284 829,274 860.8,274 860.8,294 829,294"/>
+<text x="832" y="288" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z36</text>
+<text x="890" y="288" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA4 via 220 Ω   + GND switch Q9</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,322 829,312 860.8,312 860.8,332 829,332"/>
+<text x="832" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z35</text>
+<text x="890" y="326" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA5 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,360 829,350 860.8,350 860.8,370 829,370"/>
+<text x="832" y="364" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z34</text>
+<text x="890" y="364" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPA6 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,398 829,388 860.8,388 860.8,408 829,408"/>
+<text x="832" y="402" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z33</text>
+<text x="890" y="402" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPB0 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,436 829,426 860.8,426 860.8,446 829,446"/>
+<text x="832" y="440" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z32</text>
+<text x="890" y="440" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPB1 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,474 829,464 860.8,464 860.8,484 829,484"/>
+<text x="832" y="478" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z31</text>
+<text x="890" y="478" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPB2 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,512 829,502 860.8,502 860.8,522 829,522"/>
+<text x="832" y="516" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z30</text>
+<text x="890" y="516" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPB3 via 220 Ω</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="820,550 829,540 860.8,540 860.8,560 829,560"/>
+<text x="832" y="554" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z29</text>
+<text x="890" y="554" font-size="11" text-anchor="start" font-weight="normal" fill="#444">← U3 GPB4 via 220 Ω</text>
+<text x="826" y="592" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="630" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="668" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="706" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="744" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="782" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="820" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="826" y="858" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="40" y="950" font-size="13" text-anchor="start" font-weight="normal" fill="#000">Standard 14/16/20/24-pin parts: VCC = chip pin N → ZIF 40, GND = chip pin N/2 → ZIF 7/8/10/12.</text>
+<text x="40" y="970" font-size="13" text-anchor="start" font-weight="normal" fill="#000">Odd ones: 7490/92/93 VCC ZIF 5, GND ZIF 36 · 7473 VCC 4, GND 37 · 7476 VCC 5, GND 37 · 7483/75/96 VCC 5, GND 36 · 4049/50 VDD 1, VSS 8.</text>
+<text x="40" y="990" font-size="13" text-anchor="start" font-weight="normal" fill="#000">Chip pin p → ZIF p for p ≤ N/2, else ZIF 40 − (N − p).</text></g></svg>

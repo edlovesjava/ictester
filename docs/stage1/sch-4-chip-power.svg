@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="920" viewBox="0 0 1700 920" font-family="DejaVu Sans, Arial, sans-serif"><rect width="100%" height="100%" fill="white"/><g stroke-width="1.8" stroke-linecap="round"><text x="30" y="42" font-size="22" text-anchor="start" font-weight="bold" fill="#000">Sheet 4 - Chip power: current sense, 4 VCC switches, 6 GND switches</text>
+<rect x="1370" y="18" width="300" height="36" rx="5" fill="#fdecea" stroke="#000"/>
+<text x="1520" y="42" font-size="15" text-anchor="middle" font-weight="bold" fill="#000">block: chip power</text>
+<rect x="120" y="110" width="150" height="140" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="195.0" y="162.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">U4</text>
+<text x="195.0" y="178.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">INA219</text>
+<text x="195.0" y="194.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">module</text>
+<text x="195.0" y="210.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">@0x40</text>
+<polyline fill="none" stroke="#000" points="94,132 120,132"/>
+<text x="125" y="136" font-size="11" text-anchor="start" font-weight="normal" fill="#000">VCC</text>
+<polyline fill="none" stroke="#000" points="94,162 120,162"/>
+<text x="125" y="166" font-size="11" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<polyline fill="none" stroke="#000" points="94,192 120,192"/>
+<text x="125" y="196" font-size="11" text-anchor="start" font-weight="normal" fill="#000">SCL</text>
+<polyline fill="none" stroke="#000" points="94,222 120,222"/>
+<text x="125" y="226" font-size="11" text-anchor="start" font-weight="normal" fill="#000">SDA</text>
+<polyline fill="none" stroke="#000" points="270,132 296,132"/>
+<text x="265" y="136" font-size="11" text-anchor="end" font-weight="normal" fill="#000">VIN+</text>
+<polyline fill="none" stroke="#000" points="270,162 296,162"/>
+<text x="265" y="166" font-size="11" text-anchor="end" font-weight="normal" fill="#000">VIN-</text>
+<polygon fill="#fff" stroke="#b03a2e" points="94,132 85,122 53.2,122 53.2,142 85,142"/>
+<text x="57.2" y="136" font-size="12" text-anchor="start" font-weight="normal" fill="#b03a2e">+5V</text>
+<polygon fill="#fff" stroke="#000" points="94,162 85,152 53.2,152 53.2,172 85,172"/>
+<text x="57.2" y="166" font-size="12" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="94,192 85,182 53.2,182 53.2,202 85,202"/>
+<text x="57.2" y="196" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SCL</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="94,222 85,212 53.2,212 53.2,232 85,232"/>
+<text x="57.2" y="226" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SDA</text>
+<polyline fill="none" stroke="#000" points="296,132 326,132 326,72"/>
+<polyline fill="none" stroke="#000" points="314,72 338,72"/>
+<text x="326" y="65" font-size="12" text-anchor="middle" font-weight="bold" fill="#b03a2e">+5V</text>
+<polyline fill="none" stroke="#000" points="296,162 356,162 356,200 1560,200"/>
+<text x="1500" y="190" font-size="14" text-anchor="middle" font-weight="bold" fill="#b03a2e">VCC_SW</text>
+<circle cx="420" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="420,200 420,245.0"/>
+<polyline fill="none" stroke="#000" points="420,255.0 420,300"/>
+<polyline fill="none" stroke="#000" points="406,245.0 434,245.0"/>
+<path d="M406,259.0 Q420,252.0 434,259.0" fill="none" stroke="#000"/>
+<text x="400" y="242.0" font-size="13" text-anchor="middle" font-weight="normal" fill="#000">+</text>
+<text x="400" y="255.0" font-size="12" text-anchor="end" font-weight="normal" fill="#000">C7 10 µF</text>
+<polyline fill="none" stroke="#000" points="420,300 420,308"/>
+<polyline fill="none" stroke="#000" points="408,308 432,308"/>
+<polyline fill="none" stroke="#000" points="412,312 428,312"/>
+<polyline fill="none" stroke="#000" points="416,316 424,316"/>
+<circle cx="500" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="500,200 500,245.0"/>
+<polyline fill="none" stroke="#000" points="500,255.0 500,300"/>
+<polyline fill="none" stroke="#000" points="486,245.0 514,245.0"/>
+<polyline fill="none" stroke="#000" points="486,255.0 514,255.0"/>
+<text x="520" y="255.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">C8 100 nF</text>
+<polyline fill="none" stroke="#000" points="500,300 500,308"/>
+<polyline fill="none" stroke="#000" points="488,308 512,308"/>
+<polyline fill="none" stroke="#000" points="492,312 508,312"/>
+<polyline fill="none" stroke="#000" points="496,316 504,316"/>
+<circle cx="730" cy="300" r="28" fill="none" stroke="#000"/>
+<polyline fill="none" stroke="#000" points="690,300 718,300"/>
+<polyline fill="none" stroke="#000" points="718,282 718,318"/>
+<polyline fill="none" stroke="#000" points="718,291 745,268 745,248"/>
+<polygon fill="#000" stroke="#000" points="721,289 725.4,280.0 730.5,285.9"/>
+<polyline fill="none" stroke="#000" points="718,309 745,332 745,352"/>
+<text x="764" y="304" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q1 BC327</text>
+<circle cx="745" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="745,200 745,248"/>
+<circle cx="650" cy="300" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="650,300 690,300"/>
+<polyline fill="none" stroke="#000" points="745,220 650,220"/>
+<circle cx="745" cy="220" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="650,220 650.0,240.0 644.0,243.33333333333334 656.0,250.0 644.0,256.6666666666667 656.0,263.3333333333333 644.0,270.0 656.0,276.6666666666667 650.0,280.0 650,300"/>
+<text x="638.0" y="264.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">10k</text>
+<polyline fill="none" stroke="#000" points="650,300 650.0,325.0 644.0,328.3333333333333 656.0,335.0 644.0,341.6666666666667 656.0,348.3333333333333 644.0,355.0 656.0,361.6666666666667 650.0,365.0 650,390"/>
+<text x="638.0" y="349.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">1k</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="650,390 641,380 563.6,380 563.6,400 641,400"/>
+<text x="567.6" y="394" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VCC_EN_40</text>
+<polyline fill="none" stroke="#000" points="745,352 745,410"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="745,410 754,400 785.8,400 785.8,420 754,420"/>
+<text x="757" y="414" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z40</text>
+<text x="745" y="445" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">VCC at ZIF 40</text>
+<text x="745" y="460" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">gate: U3 GPA7</text>
+<circle cx="960" cy="300" r="28" fill="none" stroke="#000"/>
+<polyline fill="none" stroke="#000" points="920,300 948,300"/>
+<polyline fill="none" stroke="#000" points="948,282 948,318"/>
+<polyline fill="none" stroke="#000" points="948,291 975,268 975,248"/>
+<polygon fill="#000" stroke="#000" points="951,289 955.4,280.0 960.5,285.9"/>
+<polyline fill="none" stroke="#000" points="948,309 975,332 975,352"/>
+<text x="994" y="304" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q2 BC327</text>
+<circle cx="975" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="975,200 975,248"/>
+<circle cx="880" cy="300" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="880,300 920,300"/>
+<polyline fill="none" stroke="#000" points="975,220 880,220"/>
+<circle cx="975" cy="220" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="880,220 880.0,240.0 874.0,243.33333333333334 886.0,250.0 874.0,256.6666666666667 886.0,263.3333333333333 874.0,270.0 886.0,276.6666666666667 880.0,280.0 880,300"/>
+<text x="868.0" y="264.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">10k</text>
+<polyline fill="none" stroke="#000" points="880,300 880.0,325.0 874.0,328.3333333333333 886.0,335.0 874.0,341.6666666666667 886.0,348.3333333333333 874.0,355.0 886.0,361.6666666666667 880.0,365.0 880,390"/>
+<text x="868.0" y="349.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">1k</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="880,390 871,380 801.2,380 801.2,400 871,400"/>
+<text x="805.2" y="394" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VCC_EN_1</text>
+<polyline fill="none" stroke="#000" points="975,352 975,410"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="975,410 984,400 1008.2,400 1008.2,420 984,420"/>
+<text x="987" y="414" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z1</text>
+<text x="975" y="445" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">VCC at ZIF 1</text>
+<text x="975" y="460" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">gate: U2 GPA7</text>
+<circle cx="1190" cy="300" r="28" fill="none" stroke="#000"/>
+<polyline fill="none" stroke="#000" points="1150,300 1178,300"/>
+<polyline fill="none" stroke="#000" points="1178,282 1178,318"/>
+<polyline fill="none" stroke="#000" points="1178,291 1205,268 1205,248"/>
+<polygon fill="#000" stroke="#000" points="1181,289 1185.4,280.0 1190.5,285.9"/>
+<polyline fill="none" stroke="#000" points="1178,309 1205,332 1205,352"/>
+<text x="1224" y="304" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q3 BC327</text>
+<circle cx="1205" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1205,200 1205,248"/>
+<circle cx="1110" cy="300" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1110,300 1150,300"/>
+<polyline fill="none" stroke="#000" points="1205,220 1110,220"/>
+<circle cx="1205" cy="220" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1110,220 1110.0,240.0 1104.0,243.33333333333334 1116.0,250.0 1104.0,256.6666666666667 1116.0,263.3333333333333 1104.0,270.0 1116.0,276.6666666666667 1110.0,280.0 1110,300"/>
+<text x="1098.0" y="264.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">10k</text>
+<polyline fill="none" stroke="#000" points="1110,300 1110.0,325.0 1104.0,328.3333333333333 1116.0,335.0 1104.0,341.6666666666667 1116.0,348.3333333333333 1104.0,355.0 1116.0,361.6666666666667 1110.0,365.0 1110,390"/>
+<text x="1098.0" y="349.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">1k</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1110,390 1101,380 1031.2,380 1031.2,400 1101,400"/>
+<text x="1035.2" y="394" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VCC_EN_4</text>
+<polyline fill="none" stroke="#000" points="1205,352 1205,410"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1205,410 1214,400 1238.2,400 1238.2,420 1214,420"/>
+<text x="1217" y="414" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z4</text>
+<text x="1205" y="445" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">VCC at ZIF 4</text>
+<text x="1205" y="460" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">gate: U2 GPB7</text>
+<circle cx="1420" cy="300" r="28" fill="none" stroke="#000"/>
+<polyline fill="none" stroke="#000" points="1380,300 1408,300"/>
+<polyline fill="none" stroke="#000" points="1408,282 1408,318"/>
+<polyline fill="none" stroke="#000" points="1408,291 1435,268 1435,248"/>
+<polygon fill="#000" stroke="#000" points="1411,289 1415.4,280.0 1420.5,285.9"/>
+<polyline fill="none" stroke="#000" points="1408,309 1435,332 1435,352"/>
+<text x="1454" y="304" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q4 BC327</text>
+<circle cx="1435" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1435,200 1435,248"/>
+<circle cx="1340" cy="300" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1340,300 1380,300"/>
+<polyline fill="none" stroke="#000" points="1435,220 1340,220"/>
+<circle cx="1435" cy="220" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1340,220 1340.0,240.0 1334.0,243.33333333333334 1346.0,250.0 1334.0,256.6666666666667 1346.0,263.3333333333333 1334.0,270.0 1346.0,276.6666666666667 1340.0,280.0 1340,300"/>
+<text x="1328.0" y="264.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">10k</text>
+<polyline fill="none" stroke="#000" points="1340,300 1340.0,325.0 1334.0,328.3333333333333 1346.0,335.0 1334.0,341.6666666666667 1346.0,348.3333333333333 1334.0,355.0 1346.0,361.6666666666667 1340.0,365.0 1340,390"/>
+<text x="1328.0" y="349.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">1k</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1340,390 1331,380 1261.2,380 1261.2,400 1331,400"/>
+<text x="1265.2" y="394" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VCC_EN_5</text>
+<polyline fill="none" stroke="#000" points="1435,352 1435,410"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1435,410 1444,400 1468.2,400 1468.2,420 1444,420"/>
+<text x="1447" y="414" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z5</text>
+<text x="1435" y="445" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">VCC at ZIF 5</text>
+<text x="1435" y="460" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">gate: U3 GPB7</text>
+<text x="40" y="560" font-size="15" text-anchor="start" font-weight="bold" fill="#000">Low-side (ground) switches  -  Q5-Q10 are 2N7000</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="250,600 259,590 283.2,590 283.2,610 259,610"/>
+<text x="262" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z7</text>
+<polyline fill="none" stroke="#000" points="250,600 250,610"/>
+<polyline fill="none" stroke="#000" points="250,610 250,638 235,638"/>
+<polyline fill="none" stroke="#000" points="235,672 250,672 250,700"/>
+<polyline fill="none" stroke="#000" points="250,655 235,655"/>
+<polygon fill="#000" stroke="#000" points="235,655 244.2,651.1 244.2,658.9"/>
+<polyline fill="none" stroke="#000" points="250,655 250,672"/>
+<polyline fill="none" stroke="#000" points="235,632 235,643"/>
+<polyline fill="none" stroke="#000" points="235,649 235,660"/>
+<polyline fill="none" stroke="#000" points="235,666 235,677"/>
+<polyline fill="none" stroke="#000" points="226,634 226,676"/>
+<polyline fill="none" stroke="#000" points="226,655 195,655"/>
+<text x="258" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q5</text>
+<polyline fill="none" stroke="#000" points="250,700 250,708"/>
+<polyline fill="none" stroke="#000" points="238,708 262,708"/>
+<polyline fill="none" stroke="#000" points="242,712 258,712"/>
+<polyline fill="none" stroke="#000" points="246,716 254,716"/>
+<circle cx="175" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="195,655 155,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="155,655 146,645 76.2,645 76.2,665 146,665"/>
+<text x="80.2" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_7</text>
+<polyline fill="none" stroke="#000" points="175,655 175.0,675.0 169.0,678.3333333333334 181.0,685.0 169.0,691.6666666666666 181.0,698.3333333333334 169.0,705.0 181.0,711.6666666666666 175.0,715.0 175,735"/>
+<text x="163.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="175,735 175,743"/>
+<polyline fill="none" stroke="#000" points="163,743 187,743"/>
+<polyline fill="none" stroke="#000" points="167,747 183,747"/>
+<polyline fill="none" stroke="#000" points="171,751 179,751"/>
+<text x="250" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 7  (D2)</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="515,600 524,590 548.2,590 548.2,610 524,610"/>
+<text x="527" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z8</text>
+<polyline fill="none" stroke="#000" points="515,600 515,610"/>
+<polyline fill="none" stroke="#000" points="515,610 515,638 500,638"/>
+<polyline fill="none" stroke="#000" points="500,672 515,672 515,700"/>
+<polyline fill="none" stroke="#000" points="515,655 500,655"/>
+<polygon fill="#000" stroke="#000" points="500,655 509.2,651.1 509.2,658.9"/>
+<polyline fill="none" stroke="#000" points="515,655 515,672"/>
+<polyline fill="none" stroke="#000" points="500,632 500,643"/>
+<polyline fill="none" stroke="#000" points="500,649 500,660"/>
+<polyline fill="none" stroke="#000" points="500,666 500,677"/>
+<polyline fill="none" stroke="#000" points="491,634 491,676"/>
+<polyline fill="none" stroke="#000" points="491,655 460,655"/>
+<text x="523" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q6</text>
+<polyline fill="none" stroke="#000" points="515,700 515,708"/>
+<polyline fill="none" stroke="#000" points="503,708 527,708"/>
+<polyline fill="none" stroke="#000" points="507,712 523,712"/>
+<polyline fill="none" stroke="#000" points="511,716 519,716"/>
+<circle cx="440" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="460,655 420,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="420,655 411,645 341.2,645 341.2,665 411,665"/>
+<text x="345.2" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_8</text>
+<polyline fill="none" stroke="#000" points="440,655 440.0,675.0 434.0,678.3333333333334 446.0,685.0 434.0,691.6666666666666 446.0,698.3333333333334 434.0,705.0 446.0,711.6666666666666 440.0,715.0 440,735"/>
+<text x="428.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="440,735 440,743"/>
+<polyline fill="none" stroke="#000" points="428,743 452,743"/>
+<polyline fill="none" stroke="#000" points="432,747 448,747"/>
+<polyline fill="none" stroke="#000" points="436,751 444,751"/>
+<text x="515" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 8  (D3)</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="780,600 789,590 820.8,590 820.8,610 789,610"/>
+<text x="792" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z10</text>
+<polyline fill="none" stroke="#000" points="780,600 780,610"/>
+<polyline fill="none" stroke="#000" points="780,610 780,638 765,638"/>
+<polyline fill="none" stroke="#000" points="765,672 780,672 780,700"/>
+<polyline fill="none" stroke="#000" points="780,655 765,655"/>
+<polygon fill="#000" stroke="#000" points="765,655 774.2,651.1 774.2,658.9"/>
+<polyline fill="none" stroke="#000" points="780,655 780,672"/>
+<polyline fill="none" stroke="#000" points="765,632 765,643"/>
+<polyline fill="none" stroke="#000" points="765,649 765,660"/>
+<polyline fill="none" stroke="#000" points="765,666 765,677"/>
+<polyline fill="none" stroke="#000" points="756,634 756,676"/>
+<polyline fill="none" stroke="#000" points="756,655 725,655"/>
+<text x="788" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q7</text>
+<polyline fill="none" stroke="#000" points="780,700 780,708"/>
+<polyline fill="none" stroke="#000" points="768,708 792,708"/>
+<polyline fill="none" stroke="#000" points="772,712 788,712"/>
+<polyline fill="none" stroke="#000" points="776,716 784,716"/>
+<circle cx="705" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="725,655 685,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="685,655 676,645 598.6,645 598.6,665 676,665"/>
+<text x="602.6" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_10</text>
+<polyline fill="none" stroke="#000" points="705,655 705.0,675.0 699.0,678.3333333333334 711.0,685.0 699.0,691.6666666666666 711.0,698.3333333333334 699.0,705.0 711.0,711.6666666666666 705.0,715.0 705,735"/>
+<text x="693.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="705,735 705,743"/>
+<polyline fill="none" stroke="#000" points="693,743 717,743"/>
+<polyline fill="none" stroke="#000" points="697,747 713,747"/>
+<polyline fill="none" stroke="#000" points="701,751 709,751"/>
+<text x="780" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 10  (D4)</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1045,600 1054,590 1085.8,590 1085.8,610 1054,610"/>
+<text x="1057" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z12</text>
+<polyline fill="none" stroke="#000" points="1045,600 1045,610"/>
+<polyline fill="none" stroke="#000" points="1045,610 1045,638 1030,638"/>
+<polyline fill="none" stroke="#000" points="1030,672 1045,672 1045,700"/>
+<polyline fill="none" stroke="#000" points="1045,655 1030,655"/>
+<polygon fill="#000" stroke="#000" points="1030,655 1039.2,651.1 1039.2,658.9"/>
+<polyline fill="none" stroke="#000" points="1045,655 1045,672"/>
+<polyline fill="none" stroke="#000" points="1030,632 1030,643"/>
+<polyline fill="none" stroke="#000" points="1030,649 1030,660"/>
+<polyline fill="none" stroke="#000" points="1030,666 1030,677"/>
+<polyline fill="none" stroke="#000" points="1021,634 1021,676"/>
+<polyline fill="none" stroke="#000" points="1021,655 990,655"/>
+<text x="1053" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q8</text>
+<polyline fill="none" stroke="#000" points="1045,700 1045,708"/>
+<polyline fill="none" stroke="#000" points="1033,708 1057,708"/>
+<polyline fill="none" stroke="#000" points="1037,712 1053,712"/>
+<polyline fill="none" stroke="#000" points="1041,716 1049,716"/>
+<circle cx="970" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="990,655 950,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="950,655 941,645 863.6,645 863.6,665 941,665"/>
+<text x="867.6" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_12</text>
+<polyline fill="none" stroke="#000" points="970,655 970.0,675.0 964.0,678.3333333333334 976.0,685.0 964.0,691.6666666666666 976.0,698.3333333333334 964.0,705.0 976.0,711.6666666666666 970.0,715.0 970,735"/>
+<text x="958.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="970,735 970,743"/>
+<polyline fill="none" stroke="#000" points="958,743 982,743"/>
+<polyline fill="none" stroke="#000" points="962,747 978,747"/>
+<polyline fill="none" stroke="#000" points="966,751 974,751"/>
+<text x="1045" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 12  (D5)</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1310,600 1319,590 1350.8,590 1350.8,610 1319,610"/>
+<text x="1322" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z36</text>
+<polyline fill="none" stroke="#000" points="1310,600 1310,610"/>
+<polyline fill="none" stroke="#000" points="1310,610 1310,638 1295,638"/>
+<polyline fill="none" stroke="#000" points="1295,672 1310,672 1310,700"/>
+<polyline fill="none" stroke="#000" points="1310,655 1295,655"/>
+<polygon fill="#000" stroke="#000" points="1295,655 1304.2,651.1 1304.2,658.9"/>
+<polyline fill="none" stroke="#000" points="1310,655 1310,672"/>
+<polyline fill="none" stroke="#000" points="1295,632 1295,643"/>
+<polyline fill="none" stroke="#000" points="1295,649 1295,660"/>
+<polyline fill="none" stroke="#000" points="1295,666 1295,677"/>
+<polyline fill="none" stroke="#000" points="1286,634 1286,676"/>
+<polyline fill="none" stroke="#000" points="1286,655 1255,655"/>
+<text x="1318" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q9</text>
+<polyline fill="none" stroke="#000" points="1310,700 1310,708"/>
+<polyline fill="none" stroke="#000" points="1298,708 1322,708"/>
+<polyline fill="none" stroke="#000" points="1302,712 1318,712"/>
+<polyline fill="none" stroke="#000" points="1306,716 1314,716"/>
+<circle cx="1235" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1255,655 1215,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1215,655 1206,645 1128.6,645 1128.6,665 1206,665"/>
+<text x="1132.6" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_36</text>
+<polyline fill="none" stroke="#000" points="1235,655 1235.0,675.0 1229.0,678.3333333333334 1241.0,685.0 1229.0,691.6666666666666 1241.0,698.3333333333334 1229.0,705.0 1241.0,711.6666666666666 1235.0,715.0 1235,735"/>
+<text x="1223.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="1235,735 1235,743"/>
+<polyline fill="none" stroke="#000" points="1223,743 1247,743"/>
+<polyline fill="none" stroke="#000" points="1227,747 1243,747"/>
+<polyline fill="none" stroke="#000" points="1231,751 1239,751"/>
+<text x="1310" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 36  (D6)</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1575,600 1584,590 1615.8,590 1615.8,610 1584,610"/>
+<text x="1587" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">Z37</text>
+<polyline fill="none" stroke="#000" points="1575,600 1575,610"/>
+<polyline fill="none" stroke="#000" points="1575,610 1575,638 1560,638"/>
+<polyline fill="none" stroke="#000" points="1560,672 1575,672 1575,700"/>
+<polyline fill="none" stroke="#000" points="1575,655 1560,655"/>
+<polygon fill="#000" stroke="#000" points="1560,655 1569.2,651.1 1569.2,658.9"/>
+<polyline fill="none" stroke="#000" points="1575,655 1575,672"/>
+<polyline fill="none" stroke="#000" points="1560,632 1560,643"/>
+<polyline fill="none" stroke="#000" points="1560,649 1560,660"/>
+<polyline fill="none" stroke="#000" points="1560,666 1560,677"/>
+<polyline fill="none" stroke="#000" points="1551,634 1551,676"/>
+<polyline fill="none" stroke="#000" points="1551,655 1520,655"/>
+<text x="1583" y="660" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Q10</text>
+<polyline fill="none" stroke="#000" points="1575,700 1575,708"/>
+<polyline fill="none" stroke="#000" points="1563,708 1587,708"/>
+<polyline fill="none" stroke="#000" points="1567,712 1583,712"/>
+<polyline fill="none" stroke="#000" points="1571,716 1579,716"/>
+<circle cx="1500" cy="655" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1520,655 1480,655"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1480,655 1471,645 1393.6,645 1393.6,665 1471,665"/>
+<text x="1397.6" y="659" font-size="11" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_37</text>
+<polyline fill="none" stroke="#000" points="1500,655 1500.0,675.0 1494.0,678.3333333333334 1506.0,685.0 1494.0,691.6666666666666 1506.0,698.3333333333334 1494.0,705.0 1506.0,711.6666666666666 1500.0,715.0 1500,735"/>
+<text x="1488.0" y="699.0" font-size="10" text-anchor="end" font-weight="normal" fill="#000">100k</text>
+<polyline fill="none" stroke="#000" points="1500,735 1500,743"/>
+<polyline fill="none" stroke="#000" points="1488,743 1512,743"/>
+<polyline fill="none" stroke="#000" points="1492,747 1508,747"/>
+<polyline fill="none" stroke="#000" points="1496,751 1504,751"/>
+<text x="1575" y="738" font-size="11" text-anchor="middle" font-weight="bold" fill="#000">GND at ZIF 37  (D7)</text>
+<text x="40" y="780" font-size="13" text-anchor="start" font-weight="normal" fill="#000">Firmware turns on exactly one VCC switch and one GND switch, chosen from the chip's database entry; everything else stays off.</text>
+<text x="40" y="800" font-size="13" text-anchor="start" font-weight="normal" fill="#000">No capacitor on any Z node: ZIF 1, 4, 5 and 40 are also signal lines, and 100 nF × 220 Ω = 22 µs would slow every edge. Decoupling (C7, C8) sits on VCC_SW instead.</text>
+<text x="40" y="820" font-size="13" text-anchor="start" font-weight="normal" fill="#000">An off switch cannot load its contact: Q1-Q4's collector-base junction would need the contact above 5.6 V, and Q5-Q10's body diode would need it below −0.6 V.</text>
+<text x="40" y="840" font-size="13" text-anchor="start" font-weight="normal" fill="#000">U4 reads the chip's current (0.1 mA per count) and VCC_SW, which is before the PNP: the chip itself sees VCC_SW minus Q's V_CE(sat) (measure it once).</text></g></svg>

@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="DejaVu Sans, Arial, sans-serif"><rect width="100%" height="100%" fill="white"/><g stroke-width="1.8" stroke-linecap="round"><text x="30" y="42" font-size="22" text-anchor="start" font-weight="bold" fill="#000">Sheet 2 - MCU (Arduino Nano, ATmega328P) and control</text>
+<rect x="1170" y="18" width="300" height="36" rx="5" fill="#fff7e0" stroke="#000"/>
+<text x="1320" y="42" font-size="15" text-anchor="middle" font-weight="bold" fill="#000">block: mcu + control</text>
+<rect x="560" y="120" width="200" height="560" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="660.0" y="364.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">A1</text>
+<text x="660.0" y="380.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">Arduino Nano</text>
+<text x="660.0" y="396.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">(ATmega328P,</text>
+<text x="660.0" y="412.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">CH340 USB)</text>
+<text x="660.0" y="428.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000"></text>
+<text x="660.0" y="444.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">in female</text>
+<text x="660.0" y="460.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">headers</text>
+<polyline fill="none" stroke="#000" points="534,142 560,142"/>
+<text x="565" y="146" font-size="12" text-anchor="start" font-weight="normal" fill="#000">TX1</text>
+<text x="556" y="139" font-size="9" text-anchor="end" font-weight="normal" fill="#666">1</text>
+<polyline fill="none" stroke="#000" points="534,178 560,178"/>
+<text x="565" y="182" font-size="12" text-anchor="start" font-weight="normal" fill="#000">RX0</text>
+<text x="556" y="175" font-size="9" text-anchor="end" font-weight="normal" fill="#666">2</text>
+<polyline fill="none" stroke="#000" points="534,214 560,214"/>
+<text x="565" y="218" font-size="12" text-anchor="start" font-weight="normal" fill="#000">RST</text>
+<text x="556" y="211" font-size="9" text-anchor="end" font-weight="normal" fill="#666">3</text>
+<polyline fill="none" stroke="#000" points="534,250 560,250"/>
+<text x="565" y="254" font-size="12" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<text x="556" y="247" font-size="9" text-anchor="end" font-weight="normal" fill="#666">4</text>
+<polyline fill="none" stroke="#000" points="534,286 560,286"/>
+<text x="565" y="290" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D2</text>
+<text x="556" y="283" font-size="9" text-anchor="end" font-weight="normal" fill="#666">5</text>
+<polyline fill="none" stroke="#000" points="534,322 560,322"/>
+<text x="565" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D3</text>
+<text x="556" y="319" font-size="9" text-anchor="end" font-weight="normal" fill="#666">6</text>
+<polyline fill="none" stroke="#000" points="534,358 560,358"/>
+<text x="565" y="362" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D4</text>
+<text x="556" y="355" font-size="9" text-anchor="end" font-weight="normal" fill="#666">7</text>
+<polyline fill="none" stroke="#000" points="534,394 560,394"/>
+<text x="565" y="398" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D5</text>
+<text x="556" y="391" font-size="9" text-anchor="end" font-weight="normal" fill="#666">8</text>
+<polyline fill="none" stroke="#000" points="534,430 560,430"/>
+<text x="565" y="434" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D6</text>
+<text x="556" y="427" font-size="9" text-anchor="end" font-weight="normal" fill="#666">9</text>
+<polyline fill="none" stroke="#000" points="534,466 560,466"/>
+<text x="565" y="470" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D7</text>
+<text x="556" y="463" font-size="9" text-anchor="end" font-weight="normal" fill="#666">10</text>
+<polyline fill="none" stroke="#000" points="534,502 560,502"/>
+<text x="565" y="506" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D8</text>
+<text x="556" y="499" font-size="9" text-anchor="end" font-weight="normal" fill="#666">11</text>
+<polyline fill="none" stroke="#000" points="534,538 560,538"/>
+<text x="565" y="542" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D9</text>
+<text x="556" y="535" font-size="9" text-anchor="end" font-weight="normal" fill="#666">12</text>
+<polyline fill="none" stroke="#000" points="534,574 560,574"/>
+<text x="565" y="578" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D10</text>
+<text x="556" y="571" font-size="9" text-anchor="end" font-weight="normal" fill="#666">13</text>
+<polyline fill="none" stroke="#000" points="534,610 560,610"/>
+<text x="565" y="614" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D11</text>
+<text x="556" y="607" font-size="9" text-anchor="end" font-weight="normal" fill="#666">14</text>
+<polyline fill="none" stroke="#000" points="534,646 560,646"/>
+<text x="565" y="650" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D12</text>
+<text x="556" y="643" font-size="9" text-anchor="end" font-weight="normal" fill="#666">15</text>
+<polyline fill="none" stroke="#000" points="760,142 786,142"/>
+<text x="755" y="146" font-size="12" text-anchor="end" font-weight="normal" fill="#000">VIN</text>
+<text x="764" y="139" font-size="9" text-anchor="start" font-weight="normal" fill="#666">30</text>
+<polyline fill="none" stroke="#000" points="760,178 786,178"/>
+<text x="755" y="182" font-size="12" text-anchor="end" font-weight="normal" fill="#000">GND </text>
+<text x="764" y="175" font-size="9" text-anchor="start" font-weight="normal" fill="#666">29</text>
+<polyline fill="none" stroke="#000" points="760,214 786,214"/>
+<text x="755" y="218" font-size="12" text-anchor="end" font-weight="normal" fill="#000">RST </text>
+<text x="764" y="211" font-size="9" text-anchor="start" font-weight="normal" fill="#666">28</text>
+<polyline fill="none" stroke="#000" points="760,250 786,250"/>
+<text x="755" y="254" font-size="12" text-anchor="end" font-weight="normal" fill="#000">5V</text>
+<text x="764" y="247" font-size="9" text-anchor="start" font-weight="normal" fill="#666">27</text>
+<polyline fill="none" stroke="#000" points="760,286 786,286"/>
+<text x="755" y="290" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A7</text>
+<text x="764" y="283" font-size="9" text-anchor="start" font-weight="normal" fill="#666">26</text>
+<polyline fill="none" stroke="#000" points="760,322 786,322"/>
+<text x="755" y="326" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A6</text>
+<text x="764" y="319" font-size="9" text-anchor="start" font-weight="normal" fill="#666">25</text>
+<polyline fill="none" stroke="#000" points="760,358 786,358"/>
+<text x="755" y="362" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A5</text>
+<text x="764" y="355" font-size="9" text-anchor="start" font-weight="normal" fill="#666">24</text>
+<polyline fill="none" stroke="#000" points="760,394 786,394"/>
+<text x="755" y="398" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A4</text>
+<text x="764" y="391" font-size="9" text-anchor="start" font-weight="normal" fill="#666">23</text>
+<polyline fill="none" stroke="#000" points="760,430 786,430"/>
+<text x="755" y="434" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A3</text>
+<text x="764" y="427" font-size="9" text-anchor="start" font-weight="normal" fill="#666">22</text>
+<polyline fill="none" stroke="#000" points="760,466 786,466"/>
+<text x="755" y="470" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A2</text>
+<text x="764" y="463" font-size="9" text-anchor="start" font-weight="normal" fill="#666">21</text>
+<polyline fill="none" stroke="#000" points="760,502 786,502"/>
+<text x="755" y="506" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A1</text>
+<text x="764" y="499" font-size="9" text-anchor="start" font-weight="normal" fill="#666">20</text>
+<polyline fill="none" stroke="#000" points="760,538 786,538"/>
+<text x="755" y="542" font-size="12" text-anchor="end" font-weight="normal" fill="#000">A0</text>
+<text x="764" y="535" font-size="9" text-anchor="start" font-weight="normal" fill="#666">19</text>
+<polyline fill="none" stroke="#000" points="760,574 786,574"/>
+<text x="755" y="578" font-size="12" text-anchor="end" font-weight="normal" fill="#000">AREF</text>
+<text x="764" y="571" font-size="9" text-anchor="start" font-weight="normal" fill="#666">18</text>
+<polyline fill="none" stroke="#000" points="760,610 786,610"/>
+<text x="755" y="614" font-size="12" text-anchor="end" font-weight="normal" fill="#000">3V3</text>
+<text x="764" y="607" font-size="9" text-anchor="start" font-weight="normal" fill="#666">17</text>
+<polyline fill="none" stroke="#000" points="760,646 786,646"/>
+<text x="755" y="650" font-size="12" text-anchor="end" font-weight="normal" fill="#000">D13</text>
+<text x="764" y="643" font-size="9" text-anchor="start" font-weight="normal" fill="#666">16</text>
+<text x="528" y="146" font-size="11" text-anchor="end" font-weight="normal" fill="#666">USB serial (on-board CH340)</text>
+<text x="528" y="182" font-size="11" text-anchor="end" font-weight="normal" fill="#666">USB serial (on-board CH340)</text>
+<text x="528" y="218" font-size="11" text-anchor="end" font-weight="normal" fill="#666">nc</text>
+<polyline fill="none" stroke="#000" points="534,250 514,250"/>
+<polyline fill="none" stroke="#000" points="514,250 514,258"/>
+<polyline fill="none" stroke="#000" points="502,258 526,258"/>
+<polyline fill="none" stroke="#000" points="506,262 522,262"/>
+<polyline fill="none" stroke="#000" points="510,266 518,266"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,286 525,276 455.2,276 455.2,296 525,296"/>
+<text x="459.2" y="290" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_7</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,322 525,312 455.2,312 455.2,332 525,332"/>
+<text x="459.2" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_8</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,358 525,348 447.6,348 447.6,368 525,368"/>
+<text x="451.6" y="362" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_10</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,394 525,384 447.6,384 447.6,404 525,404"/>
+<text x="451.6" y="398" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_12</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,430 525,420 447.6,420 447.6,440 525,440"/>
+<text x="451.6" y="434" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_36</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,466 525,456 447.6,456 447.6,476 525,476"/>
+<text x="451.6" y="470" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">GND_EN_37</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,502 525,492 493.2,492 493.2,512 525,512"/>
+<text x="497.2" y="506" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">BTN</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,538 525,528 455.2,528 455.2,548 525,548"/>
+<text x="459.2" y="542" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">LED_STAT</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,574 525,564 470.4,564 470.4,584 525,584"/>
+<text x="474.4" y="578" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">EXP_CS</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,610 525,600 485.6,600 485.6,620 525,620"/>
+<text x="489.6" y="614" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">MOSI</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="534,646 525,636 485.6,636 485.6,656 525,656"/>
+<text x="489.6" y="650" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">MISO</text>
+<text x="792" y="146" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc (do not feed 12 V here)</text>
+<polyline fill="none" stroke="#000" points="786,178 806,178"/>
+<polyline fill="none" stroke="#000" points="806,178 806,186"/>
+<polyline fill="none" stroke="#000" points="794,186 818,186"/>
+<polyline fill="none" stroke="#000" points="798,190 814,190"/>
+<polyline fill="none" stroke="#000" points="802,194 810,194"/>
+<text x="792" y="218" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<polygon fill="#fff" stroke="#b03a2e" points="786,250 795,240 826.8,240 826.8,260 795,260"/>
+<text x="798" y="254" font-size="12" text-anchor="start" font-weight="normal" fill="#b03a2e">+5V</text>
+<text x="792" y="290" font-size="11" text-anchor="start" font-weight="normal" fill="#666">spare</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="786,322 795,312 872.4,312 872.4,332 795,332"/>
+<text x="798" y="326" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VIN_SENSE</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="786,358 795,348 826.8,348 826.8,368 795,368"/>
+<text x="798" y="362" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SCL</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="786,394 795,384 826.8,384 826.8,404 795,404"/>
+<text x="798" y="398" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SDA</text>
+<text x="792" y="434" font-size="11" text-anchor="start" font-weight="normal" fill="#666">spare</text>
+<text x="792" y="470" font-size="11" text-anchor="start" font-weight="normal" fill="#666">spare</text>
+<text x="792" y="506" font-size="11" text-anchor="start" font-weight="normal" fill="#666">spare</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="786,538 795,528 857.2,528 857.2,548 795,548"/>
+<text x="798" y="542" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">EXP_RST</text>
+<text x="792" y="578" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<text x="792" y="614" font-size="11" text-anchor="start" font-weight="normal" fill="#666">nc</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="786,646 795,636 826.8,636 826.8,656 795,656"/>
+<text x="798" y="650" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SCK</text>
+<rect x="1040" y="100" width="430" height="700" rx="6" fill="#fff7e0" stroke="#000" stroke-dasharray="6,4"/>
+<text x="1060" y="126" font-size="15" text-anchor="start" font-weight="bold" fill="#000">control</text>
+<rect x="1260" y="160" width="150" height="132" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="1335.0" y="208.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">U5</text>
+<text x="1335.0" y="224.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">SSD1306</text>
+<text x="1335.0" y="240.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">128x64</text>
+<text x="1335.0" y="256.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">@0x3C</text>
+<polyline fill="none" stroke="#000" points="1234,182 1260,182"/>
+<text x="1265" y="186" font-size="11" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<text x="1256" y="179" font-size="9" text-anchor="end" font-weight="normal" fill="#666">1</text>
+<polyline fill="none" stroke="#000" points="1234,210 1260,210"/>
+<text x="1265" y="214" font-size="11" text-anchor="start" font-weight="normal" fill="#000">VCC</text>
+<text x="1256" y="207" font-size="9" text-anchor="end" font-weight="normal" fill="#666">2</text>
+<polyline fill="none" stroke="#000" points="1234,238 1260,238"/>
+<text x="1265" y="242" font-size="11" text-anchor="start" font-weight="normal" fill="#000">SCL</text>
+<text x="1256" y="235" font-size="9" text-anchor="end" font-weight="normal" fill="#666">3</text>
+<polyline fill="none" stroke="#000" points="1234,266 1260,266"/>
+<text x="1265" y="270" font-size="11" text-anchor="start" font-weight="normal" fill="#000">SDA</text>
+<text x="1256" y="263" font-size="9" text-anchor="end" font-weight="normal" fill="#666">4</text>
+<polygon fill="#fff" stroke="#000" points="1234,182 1225,172 1193.2,172 1193.2,192 1225,192"/>
+<text x="1197.2" y="186" font-size="12" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<polygon fill="#fff" stroke="#b03a2e" points="1234,210 1225,200 1193.2,200 1193.2,220 1225,220"/>
+<text x="1197.2" y="214" font-size="12" text-anchor="start" font-weight="normal" fill="#b03a2e">+5V</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1234,238 1225,228 1193.2,228 1193.2,248 1225,248"/>
+<text x="1197.2" y="242" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SCL</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1234,266 1225,256 1193.2,256 1193.2,276 1225,276"/>
+<text x="1197.2" y="270" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SDA</text>
+<polyline fill="none" stroke="#000" points="1098,330 1122,330"/>
+<text x="1110" y="323" font-size="12" text-anchor="middle" font-weight="bold" fill="#b03a2e">+5V</text>
+<polyline fill="none" stroke="#000" points="1090,330 1090.0,355.0 1084.0,358.3333333333333 1096.0,365.0 1084.0,371.6666666666667 1096.0,378.3333333333333 1084.0,385.0 1096.0,391.6666666666667 1090.0,395.0 1090,420"/>
+<text x="1078.0" y="379.0" font-size="12" text-anchor="end" font-weight="normal" fill="#000">R4</text>
+<text x="1078.0" y="394.0" font-size="12" text-anchor="end" font-weight="normal" fill="#000">4.7k</text>
+<polyline fill="none" stroke="#000" points="1150,330 1150.0,355.0 1144.0,358.3333333333333 1156.0,365.0 1144.0,371.6666666666667 1156.0,378.3333333333333 1144.0,385.0 1156.0,391.6666666666667 1150.0,395.0 1150,420"/>
+<text x="1162.0" y="379.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">R5</text>
+<text x="1162.0" y="394.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">4.7k</text>
+<polyline fill="none" stroke="#000" points="1090,330 1150,330"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1090,420 1081,410 1049.2,410 1049.2,430 1081,430"/>
+<text x="1053.2" y="424" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SCL</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1150,420 1159,410 1190.8,410 1190.8,430 1159,430"/>
+<text x="1162" y="424" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">SDA</text>
+<text x="1060" y="470" font-size="11" text-anchor="start" font-weight="normal" fill="#666">R4/R5 only if the OLED/INA219 modules lack pull-ups</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1110,540 1101,530 1069.2,530 1069.2,550 1101,550"/>
+<text x="1073.2" y="544" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">BTN</text>
+<polyline fill="none" stroke="#000" points="1110,540 1160,540"/>
+<polyline fill="none" stroke="#000" points="1160,540 1160,572.0"/>
+<polyline fill="none" stroke="#000" points="1160,588.0 1160,620"/>
+<circle cx="1160" cy="572.0" r="4" fill="#000"/>
+<circle cx="1160" cy="588.0" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1148,566.0 1148,594.0"/>
+<polyline fill="none" stroke="#000" points="1148,580.0 1138,580.0"/>
+<text x="1172" y="584.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">SW1 ID</text>
+<text x="1172" y="599.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">(short: identify,</text>
+<text x="1172" y="614.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000"> long: pin count)</text>
+<polyline fill="none" stroke="#000" points="1160,620 1160,628"/>
+<polyline fill="none" stroke="#000" points="1148,628 1172,628"/>
+<polyline fill="none" stroke="#000" points="1152,632 1168,632"/>
+<polyline fill="none" stroke="#000" points="1156,636 1164,636"/>
+<text x="1060" y="660" font-size="11" text-anchor="start" font-weight="normal" fill="#666">D8 uses the internal pull-up; no resistor.</text>
+<polygon fill="#fff" stroke="#1f5fa8" points="1330,540 1321,530 1251.2,530 1251.2,550 1321,550"/>
+<text x="1255.2" y="544" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">LED_STAT</text>
+<polyline fill="none" stroke="#000" points="1330,540 1380,540"/>
+<polyline fill="none" stroke="#000" points="1380,540 1380.0,560.0 1374.0,563.3333333333334 1386.0,570.0 1374.0,576.6666666666666 1386.0,583.3333333333334 1374.0,590.0 1386.0,596.6666666666666 1380.0,600.0 1380,620"/>
+<text x="1392.0" y="584.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">R6 1k</text>
+<polyline fill="none" stroke="#000" points="1380,620 1380,652.0"/>
+<polyline fill="none" stroke="#000" points="1380,668.0 1380,700"/>
+<polygon fill="none" stroke="#000" points="1371,652.0 1389,652.0 1380,668.0"/>
+<polyline fill="none" stroke="#000" points="1371,668.0 1389,668.0"/>
+<polyline fill="none" stroke="#000" points="1391,658.0 1400,651.0"/>
+<polygon fill="#000" stroke="#000" points="1400,651.0 1395.1,659.7 1390.3,653.6"/>
+<polyline fill="none" stroke="#000" points="1391,665.0 1400,658.0"/>
+<polygon fill="#000" stroke="#000" points="1400,658.0 1395.1,666.7 1390.3,660.6"/>
+<text x="1404" y="664.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D4</text>
+<text x="1404" y="679.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">status</text>
+<polyline fill="none" stroke="#000" points="1380,700 1380,708"/>
+<polyline fill="none" stroke="#000" points="1368,708 1392,708"/>
+<polyline fill="none" stroke="#000" points="1372,712 1388,712"/>
+<polyline fill="none" stroke="#000" points="1376,716 1384,716"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="1110,720 1101,710 1038.8,710 1038.8,730 1101,730"/>
+<text x="1042.8" y="724" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">EXP_RST</text>
+<polyline fill="none" stroke="#000" points="1110,720 1250,720"/>
+<circle cx="1250" cy="720" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1250,720 1250.0,730.0 1244.0,733.3333333333334 1256.0,740.0 1244.0,746.6666666666666 1256.0,753.3333333333334 1244.0,760.0 1256.0,766.6666666666666 1250.0,770.0 1250,780"/>
+<text x="1262.0" y="754.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">R21 10k</text>
+<polyline fill="none" stroke="#000" points="1250,780 1250,788"/>
+<polyline fill="none" stroke="#000" points="1238,788 1262,788"/>
+<polyline fill="none" stroke="#000" points="1242,792 1258,792"/>
+<polyline fill="none" stroke="#000" points="1246,796 1254,796"/>
+<text x="40" y="760" font-size="12" text-anchor="start" font-weight="normal" fill="#000">SPI (D10 CS, D11 MOSI, D12 MISO, D13 SCK) goes to both expanders on sheet 3; they share one chip-select and are told apart by address (HAEN).</text>
+<text x="40" y="779" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D13 also drives the Nano's on-board LED; it flickers during tests and does not disturb SPI.</text>
+<text x="40" y="798" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D2-D7 drive the six low-side ground switches directly (sheet 4). At reset these pins are inputs, so the 100k pull-downs hold every switch off.</text>
+<text x="40" y="817" font-size="12" text-anchor="start" font-weight="normal" fill="#000">A0 (EXP_RST) holds both expanders in reset until the firmware is ready; R21 keeps them in reset while A0 floats during boot, so every expander pin starts as an input.</text></g></svg>

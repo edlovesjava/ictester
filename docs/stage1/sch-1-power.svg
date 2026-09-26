@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="820" viewBox="0 0 1500 820" font-family="DejaVu Sans, Arial, sans-serif"><rect width="100%" height="100%" fill="white"/><g stroke-width="1.8" stroke-linecap="round"><text x="30" y="42" font-size="22" text-anchor="start" font-weight="bold" fill="#000">Sheet 1 - Main power and MCU power</text>
+<rect x="1170" y="18" width="300" height="36" rx="5" fill="#fdecea" stroke="#000"/>
+<text x="1320" y="42" font-size="15" text-anchor="middle" font-weight="bold" fill="#000">block: main power + mcu power</text>
+<rect x="40" y="170" width="90" height="270" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="85" y="300" font-size="12" text-anchor="middle" font-weight="bold" fill="#000">J1</text>
+<text x="85" y="315" font-size="12" text-anchor="middle" font-weight="bold" fill="#000">12 V</text>
+<text x="85" y="330" font-size="12" text-anchor="middle" font-weight="bold" fill="#000">barrel</text>
+<text x="85" y="345" font-size="12" text-anchor="middle" font-weight="bold" fill="#000">(centre +)</text>
+<polyline fill="none" stroke="#000" points="130,200 160,200"/>
+<text x="135" y="194" font-size="12" text-anchor="start" font-weight="normal" fill="#000">+</text>
+<polyline fill="none" stroke="#000" points="130,420 1400,420"/>
+<polyline fill="none" stroke="#000" points="1300,420 1300,428"/>
+<polyline fill="none" stroke="#000" points="1288,428 1312,428"/>
+<polyline fill="none" stroke="#000" points="1292,432 1308,432"/>
+<polyline fill="none" stroke="#000" points="1296,436 1304,436"/>
+<polyline fill="none" stroke="#000" points="160,200 197.0,200"/>
+<polyline fill="none" stroke="#000" points="213.0,200 250,200"/>
+<polygon fill="none" stroke="#000" points="197.0,191 197.0,209 213.0,200"/>
+<polyline fill="none" stroke="#000" points="213.0,191 213.0,209"/>
+<text x="205.0" y="186" font-size="12" text-anchor="middle" font-weight="normal" fill="#000">D1 1N5819</text>
+<polyline fill="none" stroke="#000" points="250,200 330,200"/>
+<circle cx="290" cy="200" r="4" fill="#000"/>
+<text x="290" y="178" font-size="12" text-anchor="middle" font-weight="bold" fill="#b03a2e">V_IN</text>
+<polyline fill="none" stroke="#000" points="290,200 290,250"/>
+<polyline fill="none" stroke="#000" points="290,250 290.0,265.0 284.0,268.3333333333333 296.0,275.0 284.0,281.6666666666667 296.0,288.3333333333333 284.0,295.0 296.0,301.6666666666667 290.0,305.0 290,320"/>
+<text x="278.0" y="289.0" font-size="12" text-anchor="end" font-weight="normal" fill="#000">R1 22k</text>
+<circle cx="290" cy="320" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="290,320 230,320"/>
+<polygon fill="#fff" stroke="#1f5fa8" points="230,320 221,310 143.60000000000002,310 143.60000000000002,330 221,330"/>
+<text x="147.60000000000002" y="324" font-size="12" text-anchor="start" font-weight="normal" fill="#1f5fa8">VIN_SENSE</text>
+<polyline fill="none" stroke="#000" points="290,320 290.0,350.0 284.0,353.3333333333333 296.0,360.0 284.0,366.6666666666667 296.0,373.3333333333333 284.0,380.0 296.0,386.66666666666663 290.0,390.0 290,420"/>
+<text x="278.0" y="374.0" font-size="12" text-anchor="end" font-weight="normal" fill="#000">R2 10k</text>
+<circle cx="290" cy="420" r="4" fill="#000"/>
+<circle cx="360" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="330,200 540,200"/>
+<polyline fill="none" stroke="#000" points="360,200 360,305.0"/>
+<polyline fill="none" stroke="#000" points="360,315.0 360,420"/>
+<polyline fill="none" stroke="#000" points="346,305.0 374,305.0"/>
+<path d="M346,319.0 Q360,312.0 374,319.0" fill="none" stroke="#000"/>
+<text x="340" y="302.0" font-size="13" text-anchor="middle" font-weight="normal" fill="#000">+</text>
+<text x="380" y="315.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">C1</text>
+<text x="380" y="330.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">100 µF</text>
+<text x="380" y="345.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">25 V</text>
+<circle cx="360" cy="420" r="4" fill="#000"/>
+<circle cx="450" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="450,200 450,305.0"/>
+<polyline fill="none" stroke="#000" points="450,315.0 450,420"/>
+<polyline fill="none" stroke="#000" points="436,305.0 464,305.0"/>
+<polyline fill="none" stroke="#000" points="436,315.0 464,315.0"/>
+<text x="470" y="315.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">C2</text>
+<text x="470" y="330.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">100 nF</text>
+<circle cx="450" cy="420" r="4" fill="#000"/>
+<rect x="540" y="160" width="140" height="90" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="610" y="200" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">U1</text>
+<text x="610" y="216" font-size="13" text-anchor="middle" font-weight="bold" fill="#000">L7805</text>
+<text x="545" y="204" font-size="10" text-anchor="start" font-weight="normal" fill="#000">IN</text>
+<text x="675" y="204" font-size="10" text-anchor="end" font-weight="normal" fill="#000">OUT</text>
+<text x="610" y="244" font-size="10" text-anchor="middle" font-weight="normal" fill="#000">GND</text>
+<polyline fill="none" stroke="#000" points="610,250 610,420"/>
+<circle cx="610" cy="420" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="680,200 1180,200"/>
+<polyline fill="none" stroke="#000" points="720,200 720,110"/>
+<circle cx="720" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="720,110 628.0,110"/>
+<polyline fill="none" stroke="#000" points="612.0,110 520,110"/>
+<polygon fill="none" stroke="#000" points="628.0,101 628.0,119 612.0,110"/>
+<polyline fill="none" stroke="#000" points="612.0,101 612.0,119"/>
+<text x="620.0" y="96" font-size="12" text-anchor="middle" font-weight="normal" fill="#000">D2 1N4007  (OUT → IN)</text>
+<polyline fill="none" stroke="#000" points="520,110 520,200"/>
+<circle cx="520" cy="200" r="4" fill="#000"/>
+<circle cx="780" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="780,200 780,305.0"/>
+<polyline fill="none" stroke="#000" points="780,315.0 780,420"/>
+<polyline fill="none" stroke="#000" points="766,305.0 794,305.0"/>
+<path d="M766,319.0 Q780,312.0 794,319.0" fill="none" stroke="#000"/>
+<text x="760" y="302.0" font-size="13" text-anchor="middle" font-weight="normal" fill="#000">+</text>
+<text x="800" y="315.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">C3 10 µF</text>
+<circle cx="780" cy="420" r="4" fill="#000"/>
+<circle cx="880" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="880,200 880,305.0"/>
+<polyline fill="none" stroke="#000" points="880,315.0 880,420"/>
+<polyline fill="none" stroke="#000" points="866,305.0 894,305.0"/>
+<polyline fill="none" stroke="#000" points="866,315.0 894,315.0"/>
+<text x="900" y="315.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">C4</text>
+<text x="900" y="330.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">100 nF</text>
+<circle cx="880" cy="420" r="4" fill="#000"/>
+<circle cx="980" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="980,200 980.0,230.0 974.0,233.33333333333334 986.0,240.0 974.0,246.66666666666669 986.0,253.33333333333331 974.0,260.0 986.0,266.66666666666663 980.0,270.0 980,300"/>
+<text x="992.0" y="254.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">R3 1k</text>
+<polyline fill="none" stroke="#000" points="980,300 980,352.0"/>
+<polyline fill="none" stroke="#000" points="980,368.0 980,420"/>
+<polygon fill="none" stroke="#000" points="971,352.0 989,352.0 980,368.0"/>
+<polyline fill="none" stroke="#000" points="971,368.0 989,368.0"/>
+<polyline fill="none" stroke="#000" points="991,358.0 1000,351.0"/>
+<polygon fill="#000" stroke="#000" points="1000,351.0 995.1,359.7 990.3,353.6"/>
+<polyline fill="none" stroke="#000" points="991,365.0 1000,358.0"/>
+<polygon fill="#000" stroke="#000" points="1000,358.0 995.1,366.7 990.3,360.6"/>
+<text x="1004" y="364.0" font-size="12" text-anchor="start" font-weight="normal" fill="#000">D3 power</text>
+<circle cx="980" cy="420" r="4" fill="#000"/>
+<text x="1080" y="190" font-size="16" text-anchor="middle" font-weight="bold" fill="#b03a2e">+5V</text>
+<circle cx="1180" cy="200" r="4" fill="#000"/>
+<polyline fill="none" stroke="#000" points="1180,200 1180,130 1260,130"/>
+<polygon fill="#fff" stroke="#b03a2e" points="1260,130 1269,120 1437.6,120 1437.6,140 1269,140"/>
+<text x="1272" y="134" font-size="12" text-anchor="start" font-weight="normal" fill="#b03a2e">+5V  → sheets 2, 3, 4</text>
+<polyline fill="none" stroke="#000" points="1180,200 1260,200"/>
+<polygon fill="#fff" stroke="#b03a2e" points="1260,200 1269,190 1414.8,190 1414.8,210 1269,210"/>
+<text x="1272" y="204" font-size="12" text-anchor="start" font-weight="normal" fill="#b03a2e">+5V  → Nano 5V pin</text>
+<rect x="1080" y="250" width="400" height="140" rx="6" fill="#fdecea" stroke="#000" stroke-dasharray="6,4"/>
+<text x="1100" y="275" font-size="14" text-anchor="start" font-weight="bold" fill="#000">mcu power</text>
+<text x="1100" y="300" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Nano 5V pin ← +5V, plus C9 10 µF + C10 100 nF at the pin.</text>
+<text x="1100" y="319" font-size="12" text-anchor="start" font-weight="normal" fill="#000">Nano VIN is NOT connected (no second regulator).</text>
+<text x="1100" y="338" font-size="12" text-anchor="start" font-weight="normal" fill="#000">USB plugged in with 12 V off: USB back-feeds</text>
+<text x="1100" y="357" font-size="12" text-anchor="start" font-weight="normal" fill="#000">+5V through the Nano's diode; D2 protects U1.</text>
+<text x="40" y="500" font-size="13" text-anchor="start" font-weight="normal" fill="#000">D1 1N5819 (Schottky): reverse-polarity protection. Drop ≈ 0.3-0.45 V at 150 mA (estimate), so V_IN ≈ 11.6 V from a 12 V adapter.</text>
+<text x="40" y="520" font-size="13" text-anchor="start" font-weight="normal" fill="#000">U1 dissipation at 150 mA (estimate: Nano 25 + OLED 20 + expanders/INA 3 + LEDs 6 + worst chip 60 + one contention 23 ≈ 140 mA):</text>
+<text x="40" y="540" font-size="13" text-anchor="start" font-weight="normal" fill="#000">      P = (V_IN − 5 V) × I + V_IN × Id = (11.6 − 5) V × 0.15 A + 11.6 V × 0.008 A = 0.99 W + 0.093 W = 1.083 W</text>
+<text x="40" y="560" font-size="13" text-anchor="start" font-weight="normal" fill="#000">      rise = 1.083 W × 50 °C/W (bare TO-220) = 54.2 °C  →  79.2 °C at 25 °C ambient. Fit a clip-on heatsink, or use a 9 V adapter.</text>
+<text x="40" y="580" font-size="13" text-anchor="start" font-weight="normal" fill="#000">R1/R2 divide V_IN by (22k + 10k) / 10k = 3.2 for A6: 11.6 V → 3.63 V; 15 V → 4.69 V (still under 5 V). Firmware refuses to test if V_IN is absent.</text>
+<text x="40" y="600" font-size="13" text-anchor="start" font-weight="normal" fill="#000">C1/C2 at U1's IN pin, C3/C4 at its OUT pin: the datasheet asks for them close to the regulator.</text>
+<text x="40" y="620" font-size="13" text-anchor="start" font-weight="normal" fill="#000">One ground, star-joined here at U1's GND pin; every other block's ground returns to this point.</text></g></svg>

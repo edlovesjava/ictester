@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="930" viewBox="0 0 1500 930" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<style>polyline,line,circle,rect,polygon{stroke:#000;stroke-width:1.8} .f{fill:#000} text{fill:#000}</style>
+<text x="30" y="40" font-size="20" text-anchor="start" font-weight="bold">Sheet 1 - DUT power switch, current sense, low-side grounds, I2C</text>
+<polyline fill="none" points="406,80 434,80"/>
+<text x="420" y="72" font-size="14" text-anchor="middle" font-weight="bold">+5V</text>
+<circle cx="402" cy="180" r="32" fill="none"/>
+<polyline fill="none" points="360,180 390,180"/>
+<polyline fill="none" points="390,160 390,200"/>
+<polyline fill="none" points="390,170 420,144 420,120"/>
+<polygon class="f" points="393,168 397.3,159.0 402.5,164.8"/>
+<polyline fill="none" points="390,190 420,216 420,240"/>
+<polyline fill="none" points="420,80 420,120"/>
+<circle cx="420" cy="105" r="4" class="f"/>
+<polyline fill="none" points="420,105 300,105"/>
+<polyline fill="none" points="300,105 300,115 307,119.58333333333333 293,128.75 307,137.91666666666666 293,147.08333333333331 307,156.25 293,165.41666666666666 300,170 300,180"/>
+<text x="314" y="140.5" font-size="13" text-anchor="start" font-weight="normal">R1 10k</text>
+<circle cx="300" cy="180" r="4" class="f"/>
+<polyline fill="none" points="300,180 360,180"/>
+<polyline fill="none" points="300,170 290,170 281.6666666666667,177 265.0,163 248.33333333333331,177 231.66666666666666,163 215.0,177 198.33333333333331,163 190,170 180,170"/>
+<text x="240.0" y="156" font-size="13" text-anchor="middle" font-weight="normal">R2 1k</text>
+<text x="160" y="176" font-size="13" text-anchor="end" font-weight="normal">U2 GP0</text>
+<text x="160" y="193" font-size="11" text-anchor="end" font-weight="normal">(/VCC_EN, active low)</text>
+<text x="470" y="172" font-size="14" text-anchor="start" font-weight="bold">Q1 BC327</text>
+<text x="470" y="190" font-size="12" text-anchor="start" font-weight="normal">PNP, I_C 800 mA</text>
+<polyline fill="none" points="420,240 420,270"/>
+<circle cx="420" cy="270" r="4" class="f"/>
+<text x="408" y="275" font-size="12" text-anchor="end" font-weight="normal">VIN+</text>
+<polyline fill="none" points="420,270 420,280 427,285.8333333333333 413,297.5 427,309.1666666666667 413,320.8333333333333 427,332.5 413,344.16666666666663 420,350 420,360"/>
+<text x="434" y="313.0" font-size="13" text-anchor="start" font-weight="normal">R_shunt 0.1 Ω</text>
+<text x="434" y="329.0" font-size="13" text-anchor="start" font-weight="normal">(on the INA219 module)</text>
+<circle cx="420" cy="360" r="4" class="f"/>
+<text x="408" y="365" font-size="12" text-anchor="end" font-weight="normal">VIN-</text>
+<polyline fill="none" points="420,360 420,400 760,400"/>
+<circle cx="600" cy="400" r="4" class="f"/>
+<text x="600" y="390" font-size="14" text-anchor="middle" font-weight="bold">V_DUT</text>
+<polyline fill="none" points="600,400 600,430.0"/>
+<polyline fill="none" points="600,440.0 600,470"/>
+<polyline fill="none" points="584,430.0 616,430.0"/>
+<polyline fill="none" points="584,440.0 616,440.0"/>
+<text x="622" y="439.0" font-size="13" text-anchor="start" font-weight="normal">C1 100 nF</text>
+<polyline fill="none" points="600,470 600,478"/>
+<polyline fill="none" points="586,478 614,478"/>
+<polyline fill="none" points="591,483 609,483"/>
+<polyline fill="none" points="596,488 604,488"/>
+<polygon fill="none" points="760,400 770,389 926,389 926,411 770,411"/>
+<text x="772" y="405" font-size="13" text-anchor="start" font-weight="normal">ZIF 40 (chip pin N)</text>
+<text x="30" y="560" font-size="15" text-anchor="start" font-weight="bold">Low-side ground switches (one per package size)</text>
+<text x="180" y="598" font-size="14" text-anchor="middle" font-weight="bold">ZIF 7</text>
+<text x="180" y="614" font-size="11" text-anchor="middle" font-weight="normal">(14-pin GND)</text>
+<polyline fill="none" points="180,620 180,640"/>
+<polyline fill="none" points="180,640 180,672 164,672"/>
+<polyline fill="none" points="164,708 180,708 180,740"/>
+<polyline fill="none" points="180,690 164,690"/>
+<polygon class="f" points="164,690 173.2,686.1 173.2,693.9"/>
+<polyline fill="none" points="180,690 180,708"/>
+<polyline fill="none" points="164,666 164,678"/>
+<polyline fill="none" points="164,684 164,696"/>
+<polyline fill="none" points="164,702 164,714"/>
+<polyline fill="none" points="154,668 154,712"/>
+<polyline fill="none" points="154,690 120,690"/>
+<polyline fill="none" points="180,740 180,748"/>
+<polyline fill="none" points="166,748 194,748"/>
+<polyline fill="none" points="171,753 189,753"/>
+<polyline fill="none" points="176,758 184,758"/>
+<text x="190" y="700" font-size="13" text-anchor="start" font-weight="bold">Q2</text>
+<text x="190" y="716" font-size="11" text-anchor="start" font-weight="normal">2N7000</text>
+<circle cx="120" cy="690" r="4" class="f"/>
+<polyline fill="none" points="120,690 120,700 127,705.0 113,715.0 127,725.0 113,735.0 127,745.0 113,755.0 120,760 120,770"/>
+<text x="106" y="728.0" font-size="13" text-anchor="end" font-weight="normal">100k</text>
+<polyline fill="none" points="120,770 120,778"/>
+<polyline fill="none" points="106,778 134,778"/>
+<polyline fill="none" points="111,783 129,783"/>
+<polyline fill="none" points="116,788 124,788"/>
+<polyline fill="none" points="120,690 120,665 90,665"/>
+<text x="86" y="670" font-size="12" text-anchor="end" font-weight="normal">U2 GP1</text>
+<text x="420" y="598" font-size="14" text-anchor="middle" font-weight="bold">ZIF 8</text>
+<text x="420" y="614" font-size="11" text-anchor="middle" font-weight="normal">(16-pin GND)</text>
+<polyline fill="none" points="420,620 420,640"/>
+<polyline fill="none" points="420,640 420,672 404,672"/>
+<polyline fill="none" points="404,708 420,708 420,740"/>
+<polyline fill="none" points="420,690 404,690"/>
+<polygon class="f" points="404,690 413.2,686.1 413.2,693.9"/>
+<polyline fill="none" points="420,690 420,708"/>
+<polyline fill="none" points="404,666 404,678"/>
+<polyline fill="none" points="404,684 404,696"/>
+<polyline fill="none" points="404,702 404,714"/>
+<polyline fill="none" points="394,668 394,712"/>
+<polyline fill="none" points="394,690 360,690"/>
+<polyline fill="none" points="420,740 420,748"/>
+<polyline fill="none" points="406,748 434,748"/>
+<polyline fill="none" points="411,753 429,753"/>
+<polyline fill="none" points="416,758 424,758"/>
+<text x="430" y="700" font-size="13" text-anchor="start" font-weight="bold">Q3</text>
+<text x="430" y="716" font-size="11" text-anchor="start" font-weight="normal">2N7000</text>
+<circle cx="360" cy="690" r="4" class="f"/>
+<polyline fill="none" points="360,690 360,700 367,705.0 353,715.0 367,725.0 353,735.0 367,745.0 353,755.0 360,760 360,770"/>
+<text x="346" y="728.0" font-size="13" text-anchor="end" font-weight="normal">100k</text>
+<polyline fill="none" points="360,770 360,778"/>
+<polyline fill="none" points="346,778 374,778"/>
+<polyline fill="none" points="351,783 369,783"/>
+<polyline fill="none" points="356,788 364,788"/>
+<polyline fill="none" points="360,690 360,665 330,665"/>
+<text x="326" y="670" font-size="12" text-anchor="end" font-weight="normal">U2 GP2</text>
+<text x="660" y="598" font-size="14" text-anchor="middle" font-weight="bold">ZIF 10</text>
+<text x="660" y="614" font-size="11" text-anchor="middle" font-weight="normal">(20-pin GND)</text>
+<polyline fill="none" points="660,620 660,640"/>
+<polyline fill="none" points="660,640 660,672 644,672"/>
+<polyline fill="none" points="644,708 660,708 660,740"/>
+<polyline fill="none" points="660,690 644,690"/>
+<polygon class="f" points="644,690 653.2,686.1 653.2,693.9"/>
+<polyline fill="none" points="660,690 660,708"/>
+<polyline fill="none" points="644,666 644,678"/>
+<polyline fill="none" points="644,684 644,696"/>
+<polyline fill="none" points="644,702 644,714"/>
+<polyline fill="none" points="634,668 634,712"/>
+<polyline fill="none" points="634,690 600,690"/>
+<polyline fill="none" points="660,740 660,748"/>
+<polyline fill="none" points="646,748 674,748"/>
+<polyline fill="none" points="651,753 669,753"/>
+<polyline fill="none" points="656,758 664,758"/>
+<text x="670" y="700" font-size="13" text-anchor="start" font-weight="bold">Q4</text>
+<text x="670" y="716" font-size="11" text-anchor="start" font-weight="normal">2N7000</text>
+<circle cx="600" cy="690" r="4" class="f"/>
+<polyline fill="none" points="600,690 600,700 607,705.0 593,715.0 607,725.0 593,735.0 607,745.0 593,755.0 600,760 600,770"/>
+<text x="586" y="728.0" font-size="13" text-anchor="end" font-weight="normal">100k</text>
+<polyline fill="none" points="600,770 600,778"/>
+<polyline fill="none" points="586,778 614,778"/>
+<polyline fill="none" points="591,783 609,783"/>
+<polyline fill="none" points="596,788 604,788"/>
+<polyline fill="none" points="600,690 600,665 570,665"/>
+<text x="566" y="670" font-size="12" text-anchor="end" font-weight="normal">U2 GP3</text>
+<text x="900" y="598" font-size="14" text-anchor="middle" font-weight="bold">ZIF 12</text>
+<text x="900" y="614" font-size="11" text-anchor="middle" font-weight="normal">(24-pin GND)</text>
+<polyline fill="none" points="900,620 900,640"/>
+<polyline fill="none" points="900,640 900,672 884,672"/>
+<polyline fill="none" points="884,708 900,708 900,740"/>
+<polyline fill="none" points="900,690 884,690"/>
+<polygon class="f" points="884,690 893.2,686.1 893.2,693.9"/>
+<polyline fill="none" points="900,690 900,708"/>
+<polyline fill="none" points="884,666 884,678"/>
+<polyline fill="none" points="884,684 884,696"/>
+<polyline fill="none" points="884,702 884,714"/>
+<polyline fill="none" points="874,668 874,712"/>
+<polyline fill="none" points="874,690 840,690"/>
+<polyline fill="none" points="900,740 900,748"/>
+<polyline fill="none" points="886,748 914,748"/>
+<polyline fill="none" points="891,753 909,753"/>
+<polyline fill="none" points="896,758 904,758"/>
+<text x="910" y="700" font-size="13" text-anchor="start" font-weight="bold">Q5</text>
+<text x="910" y="716" font-size="11" text-anchor="start" font-weight="normal">2N7000</text>
+<circle cx="840" cy="690" r="4" class="f"/>
+<polyline fill="none" points="840,690 840,700 847,705.0 833,715.0 847,725.0 833,735.0 847,745.0 833,755.0 840,760 840,770"/>
+<text x="826" y="728.0" font-size="13" text-anchor="end" font-weight="normal">100k</text>
+<polyline fill="none" points="840,770 840,778"/>
+<polyline fill="none" points="826,778 854,778"/>
+<polyline fill="none" points="831,783 849,783"/>
+<polyline fill="none" points="836,788 844,788"/>
+<polyline fill="none" points="840,690 840,665 810,665"/>
+<text x="806" y="670" font-size="12" text-anchor="end" font-weight="normal">U2 GP4</text>
+<text x="1060" y="80" font-size="13" text-anchor="start" font-weight="bold">I2C (U1 PC0 = SCL, PC1 = SDA, 4.7k pull-ups to +5V)</text>
+<rect x="1100" y="100" width="200" height="238" fill="none"/>
+<text x="1200.0" y="209.0" font-size="14" text-anchor="middle" font-weight="bold">U2</text>
+<text x="1200.0" y="226.0" font-size="14" text-anchor="middle" font-weight="bold">MCP23008</text>
+<text x="1200.0" y="243.0" font-size="14" text-anchor="middle" font-weight="bold">@ 0x20</text>
+<polyline fill="none" points="1070,128 1100,128"/>
+<text x="1106" y="133" font-size="12" text-anchor="start" font-weight="normal">SCL</text>
+<text x="1066" y="133" font-size="12" text-anchor="end" font-weight="normal">SCL</text>
+<polyline fill="none" points="1070,154 1100,154"/>
+<text x="1106" y="159" font-size="12" text-anchor="start" font-weight="normal">SDA</text>
+<text x="1066" y="159" font-size="12" text-anchor="end" font-weight="normal">SDA</text>
+<polyline fill="none" points="1070,180 1100,180"/>
+<text x="1106" y="185" font-size="12" text-anchor="start" font-weight="normal">A0</text>
+<text x="1066" y="185" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<polyline fill="none" points="1070,206 1100,206"/>
+<text x="1106" y="211" font-size="12" text-anchor="start" font-weight="normal">A1</text>
+<text x="1066" y="211" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<polyline fill="none" points="1070,232 1100,232"/>
+<text x="1106" y="237" font-size="12" text-anchor="start" font-weight="normal">A2</text>
+<text x="1066" y="237" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<polyline fill="none" points="1070,258 1100,258"/>
+<text x="1106" y="263" font-size="12" text-anchor="start" font-weight="normal">/RESET</text>
+<text x="1066" y="263" font-size="12" text-anchor="end" font-weight="normal">+5V</text>
+<polyline fill="none" points="1070,284 1100,284"/>
+<text x="1106" y="289" font-size="12" text-anchor="start" font-weight="normal">VDD</text>
+<text x="1066" y="289" font-size="12" text-anchor="end" font-weight="normal">+5V</text>
+<polyline fill="none" points="1070,310 1100,310"/>
+<text x="1106" y="315" font-size="12" text-anchor="start" font-weight="normal">VSS</text>
+<text x="1066" y="315" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<polyline fill="none" points="1300,128 1330,128"/>
+<text x="1294" y="133" font-size="12" text-anchor="end" font-weight="normal">GP0</text>
+<text x="1334" y="133" font-size="12" text-anchor="start" font-weight="normal">Q1 via R2</text>
+<polyline fill="none" points="1300,154 1330,154"/>
+<text x="1294" y="159" font-size="12" text-anchor="end" font-weight="normal">GP1</text>
+<text x="1334" y="159" font-size="12" text-anchor="start" font-weight="normal">Q2 gate</text>
+<polyline fill="none" points="1300,180 1330,180"/>
+<text x="1294" y="185" font-size="12" text-anchor="end" font-weight="normal">GP2</text>
+<text x="1334" y="185" font-size="12" text-anchor="start" font-weight="normal">Q3 gate</text>
+<polyline fill="none" points="1300,206 1330,206"/>
+<text x="1294" y="211" font-size="12" text-anchor="end" font-weight="normal">GP3</text>
+<text x="1334" y="211" font-size="12" text-anchor="start" font-weight="normal">Q4 gate</text>
+<polyline fill="none" points="1300,232 1330,232"/>
+<text x="1294" y="237" font-size="12" text-anchor="end" font-weight="normal">GP4</text>
+<text x="1334" y="237" font-size="12" text-anchor="start" font-weight="normal">Q5 gate</text>
+<polyline fill="none" points="1300,258 1330,258"/>
+<text x="1294" y="263" font-size="12" text-anchor="end" font-weight="normal">GP5</text>
+<text x="1334" y="263" font-size="12" text-anchor="start" font-weight="normal">-</text>
+<polyline fill="none" points="1300,284 1330,284"/>
+<text x="1294" y="289" font-size="12" text-anchor="end" font-weight="normal">GP6</text>
+<text x="1334" y="289" font-size="12" text-anchor="start" font-weight="normal">-</text>
+<polyline fill="none" points="1300,310 1330,310"/>
+<text x="1294" y="315" font-size="12" text-anchor="end" font-weight="normal">GP7</text>
+<text x="1334" y="315" font-size="12" text-anchor="start" font-weight="normal">-</text>
+<rect x="1100" y="370" width="200" height="134" fill="none"/>
+<text x="1200.0" y="427.0" font-size="14" text-anchor="middle" font-weight="bold">U3 INA219</text>
+<text x="1200.0" y="444.0" font-size="14" text-anchor="middle" font-weight="bold">@ 0x40</text>
+<polyline fill="none" points="1070,398 1100,398"/>
+<text x="1106" y="403" font-size="12" text-anchor="start" font-weight="normal">SCL</text>
+<text x="1066" y="403" font-size="12" text-anchor="end" font-weight="normal">SCL</text>
+<polyline fill="none" points="1070,424 1100,424"/>
+<text x="1106" y="429" font-size="12" text-anchor="start" font-weight="normal">SDA</text>
+<text x="1066" y="429" font-size="12" text-anchor="end" font-weight="normal">SDA</text>
+<polyline fill="none" points="1070,450 1100,450"/>
+<text x="1106" y="455" font-size="12" text-anchor="start" font-weight="normal">VCC</text>
+<text x="1066" y="455" font-size="12" text-anchor="end" font-weight="normal">+5V</text>
+<polyline fill="none" points="1070,476 1100,476"/>
+<text x="1106" y="481" font-size="12" text-anchor="start" font-weight="normal">GND</text>
+<text x="1066" y="481" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<polyline fill="none" points="1300,398 1330,398"/>
+<text x="1294" y="403" font-size="12" text-anchor="end" font-weight="normal">VIN+</text>
+<text x="1334" y="403" font-size="12" text-anchor="start" font-weight="normal">Q1 collector</text>
+<polyline fill="none" points="1300,424 1330,424"/>
+<text x="1294" y="429" font-size="12" text-anchor="end" font-weight="normal">VIN-</text>
+<text x="1334" y="429" font-size="12" text-anchor="start" font-weight="normal">V_DUT</text>
+<rect x="1100" y="540" width="200" height="134" fill="none"/>
+<text x="1200.0" y="597.0" font-size="14" text-anchor="middle" font-weight="bold">U4 SSD1306</text>
+<text x="1200.0" y="614.0" font-size="14" text-anchor="middle" font-weight="bold">128x64 @ 0x3C</text>
+<polyline fill="none" points="1070,568 1100,568"/>
+<text x="1106" y="573" font-size="12" text-anchor="start" font-weight="normal">SCL</text>
+<text x="1066" y="573" font-size="12" text-anchor="end" font-weight="normal">SCL</text>
+<polyline fill="none" points="1070,594 1100,594"/>
+<text x="1106" y="599" font-size="12" text-anchor="start" font-weight="normal">SDA</text>
+<text x="1066" y="599" font-size="12" text-anchor="end" font-weight="normal">SDA</text>
+<polyline fill="none" points="1070,620 1100,620"/>
+<text x="1106" y="625" font-size="12" text-anchor="start" font-weight="normal">VCC</text>
+<text x="1066" y="625" font-size="12" text-anchor="end" font-weight="normal">+5V</text>
+<polyline fill="none" points="1070,646 1100,646"/>
+<text x="1106" y="651" font-size="12" text-anchor="start" font-weight="normal">GND</text>
+<text x="1066" y="651" font-size="12" text-anchor="end" font-weight="normal">GND</text>
+<text x="30" y="830" font-size="13" text-anchor="start" font-weight="normal">Q1 base drive: I_B = (5 V - V_EB 0.7 V - V_OL ~0.1 V) / 1 kΩ - 0.7 V / 10 kΩ ≈ 4.1 mA: forced gain 5.3 at 22 mA, deeper than the BC327 sheet's V_CE(sat) ≤ 0.7 V point (500 mA / 50 mA).</text>
+<text x="30" y="852" font-size="13" text-anchor="start" font-weight="normal">R1 holds Q1 OFF while U2 is in reset (all MCP23008 pins power up as inputs). The 100k gate resistors do the same for Q2-Q5.</text>
+<text x="30" y="874" font-size="13" text-anchor="start" font-weight="normal">INA219 PGA /1: ±40 mV full scale / 0.1 Ω = ±400 mA; 10 µV LSB / 0.1 Ω = 0.1 mA per count. Firmware trips at 120 mA (LIMIT command).</text>
+<text x="30" y="896" font-size="13" text-anchor="start" font-weight="normal">2N7000: R_DS(on) ≤ 6.0 Ω at V_GS 4.5 V, I_D 75 mA → at a standard 7400's I_CCL(max) 22 mA the chip's ground sits ≤ 0.13 V up. (A ULN2003 would lift it ~0.9 V: too much.)</text>
+</svg>
