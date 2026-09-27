@@ -352,22 +352,22 @@ git push
 
 **Interfaces:** Consumes the `zmap` table and `P()` / `D_` from task 1. Produces nothing new.
 
-- [ ] **Step 1: Wire it.** On the breadboard: 74LS00 (or 74HC00) with pin 1 → 220 Ω → D2, pin 2 → 220 Ω → D3,
+- [x] **Step 1: Wire it.** On the breadboard: 74LS00 (or 74HC00) with pin 1 → 220 Ω → D2, pin 2 → 220 Ω → D3,
   pin 3 → 220 Ω → D4, pin 7 → Nano GND, pin 14 → A0, 100 nF from pin 14 to pin 7. Leave pins 4–6 and 8–13 unconnected.
-- [ ] **Step 2: Map ZIF 1–3.** In `zmap`, change the ZIF 1–6 line to:
+- [x] **Step 2: Map ZIF 1–3.** In `zmap`, change the ZIF 1–6 line to:
 
 ```c
     P(D_,2), P(D_,3), P(D_,4), NONE, NONE, NONE, /* ZIF 1-6:  D2-D7 (task 3 adds 4-6) */
 ```
 
-- [ ] **Step 3: Build and flash.** `cd firmware && make && make flash PORT=COMx`
-- [ ] **Step 4: Bench check.**
+- [x] **Step 3: Build and flash.** `cd firmware && make && make flash PORT=COMx`
+- [x] **Step 4: Bench check.**
   1. `python ../host/ictester.py --json vec 00HXXXGXXXXXXV`. Expected: `"match": true`.
   2. `python ../host/ictester.py --json vec 11LXXXGXXXXXXV`. Expected: `"match": true`.
   3. `python ../host/ictester.py --json vec 11HXXXGXXXXXXV`. Expected: `"match": false`, and `"read"` shows `L` in the third position. This proves a wrong expectation is caught.
   4. Straight after 2 (the chip stays powered after `VEC`): meter chip pin 14 to pin 7 ≈ 4.8 V, and pin 3 to pin 7 below 0.5 V.
   5. `python ../host/ictester.py raw OFF`, then meter pin 14 to pin 7 ≈ 0 V.
-- [ ] **Step 5: Commit** `hal_nano0.c` as "Stage 0 step 2: first 7400 gate on the breadboard".
+- [x] **Step 5: Commit** `hal_nano0.c` as "Stage 0 step 2: first 7400 gate on the breadboard".
 
 ---
 

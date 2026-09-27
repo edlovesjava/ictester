@@ -25,7 +25,7 @@ enum { B_, C_, D_ };
 
 static const uint8_t zmap[41] = {
     NONE,
-    NONE, NONE, NONE, NONE, NONE, NONE,          /* ZIF 1-6:  D2-D7 (tasks 2, 3) */
+    P(D_,2), P(D_,3), P(D_,4), NONE, NONE, NONE, /* ZIF 1-6:  D2-D7 (task 3 adds 4-6) */
     NONE,                                         /* ZIF 7:    GND wire           */
     NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, /* ZIF 8-17  */
     NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, /* ZIF 18-27 */
