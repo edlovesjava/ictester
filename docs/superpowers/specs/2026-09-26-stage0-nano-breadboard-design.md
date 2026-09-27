@@ -33,9 +33,11 @@ The firmware places a 14-pin chip in a virtual 40-pin ZIF: pins 1–7 at ZIF 1�
 
 ## Firmware
 
-- **Board selection.** The Makefile gains `BOARD ?= nano0`. That sets `MCU=atmega328p`, the source list
-  (`hal_nano0.c`, `ui_null.c`, no `twi.c` / `ssd1306.c` / `ui.c`), and `-DBOARD_NANO0`. The 1284P build
-  is dropped from the Makefile. Its `hal_avr.c` stays in the tree for reference, unbuilt.
+- **Board selection.** The Makefile gains `BOARD ?= nano0`. That sets `MCU=atmega328p` and the source list
+  (`hal_nano0.c`, `ui_led.c`, no `twi.c` / `ssd1306.c` / `ui.c`). The 1284P build and `make fuses` are
+  dropped from the Makefile. `hal_avr.c` stays in the tree for reference, unbuilt. The automatic chip-DB
+  regeneration rule becomes an explicit `make db`.
+- **`ui_led.c`** stands in for the OLED: the D13 LED is on while a test or identify runs.
 - **Flashing.** Through the Nano's bootloader:
   `avrdude -c arduino -p m328p -P $(PORT) -b $(UPLOAD_BAUD)`, `UPLOAD_BAUD ?= 115200`
   (57600 for Nanos with the old bootloader). `make fuses` does not apply to the Nano.
@@ -51,9 +53,10 @@ The firmware places a 14-pin chip in a virtual 40-pin ZIF: pins 1–7 at ZIF 1�
 - **`main.c`.** The 1284P JTAG lines are removed. OLED and button code is compiled only when the board has
   a panel (`HAVE_PANEL`, not set for nano0).
 - **`uart.c`.** On the 328P the interrupt vector is named `USART_RX_vect`; pick the name by MCU.
-- **Pin-count guard (step 3).** `HAL_MAX_PINS` (14 for nano0, 24 by default) makes `ID`, `PINS` and `VEC`
-  reject larger packages with `{"error":"board supports up to 14 pins"}`. The simulated tests keep
-  the default of 24, so they are unaffected.
+- **Pin-count guard (step 3).** A new `hal_max_pins()` (14 for nano0, 24 in the simulation) makes `TEST`,
+  `ID`, `PINS` and `VEC` reject larger packages with `{"error":"board supports up to 14 pins"}`, without
+  powering the socket. It is a function, not a build constant, so the simulated tests can check both
+  cases in one run.
 
 ## Steps
 
@@ -62,15 +65,17 @@ touches `tester.c`, `cmd.c` or the chip database.
 
 | # | Step | Change | Check |
 |---|---|---|---|
-| 1 | Nano answers over USB | Makefile `BOARD=nano0`, `hal_nano0.c` with an empty pin map, `main.c` / `uart.c` fixes | `make flash PORT=COMx` succeeds. `python host/ictester.py info` prints the INFO JSON with `"chips":50`. `ictester.py raw BOGUS` → `{"error":"unknown command"}`. |
-| 2 | One gate | Map chip pins 1–3 and VCC (A0). Wire gate 1, GND and VCC only. | `ictester.py vec 00HXXXGXXXXXXV` → `match:true`. `vec 11LXXXGXXXXXXV` → `match:true`. With the chip left powered after `vec 11LXXXGXXXXXXV`, a meter reads chip pin 3 low and pin 14 about 4.8 V. `off` → pin 14 reads 0 V. |
-| 3 | Whole 7400 | Map the remaining nine pins. Add `HAL_MAX_PINS`. | `ictester.py test 7400` passes on the 74LS00 and on the 74HC00. Remove the wire to chip pin 11 → fails with `pin:11`. `ictester.py id --pins 16` → error. |
+| 1 | Nano answers over USB | Makefile `BOARD=nano0`, `hal_nano0.c` complete except the pin map (A0 VCC control included, not yet wired), `ui_led.c`, `main.c` / `uart.c` fixes | `make flash PORT=COMx` succeeds. `python host/ictester.py info` prints the INFO JSON with `"chips":50`. `ictester.py raw BOGUS` → `{"error":"unknown command"}`. |
+| 2 | One gate | Map chip pins 1–3. Wire gate 1, GND and VCC (A0) only. | `ictester.py vec 00HXXXGXXXXXXV` → `match:true`. `vec 11LXXXGXXXXXXV` → `match:true`. With the chip left powered after `vec 11LXXXGXXXXXXV`, a meter reads chip pin 3 low and pin 14 about 4.8 V. `off` → pin 14 reads 0 V. |
+| 3 | Whole 7400 | Map the remaining nine pins. Add `hal_max_pins()` and the guard, test-first. | `ictester.py test 7400` passes on the 74LS00 and on the 74HC00. Remove the wire to chip pin 11 → fails with `pin:11`. `ictester.py id --pins 16` → error. |
 | 4 | Identify | None expected | `ictester.py id` → 7400 family only. If a 7402/7404/7408 is on hand, swap it in and check `id` names it. |
 | 5 | Host workflow | Fixes the real board turns up | `ictester.py test 74LS00 74HC00` and `ictester.py batch` over 10 chip swaps, no timeouts or garbled lines. |
 
 If a step fails, debug it at that step. Don't move on with a known failure.
 
 ## Later stages (outline only, each gets its own spec and plan)
+
+Fuller outline, through perfboard and PCB: [roadmap](../roadmap.md).
 
 - **1a: expanders.** Two MCP23S17s on SPI (D10–D13) replace direct GPIO. New `hal_nano1.c` with shadow
   registers, the same stage 0 7400 checks, then 16- to 24-pin chips.
