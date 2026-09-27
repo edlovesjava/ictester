@@ -148,6 +148,27 @@ int main(void)
     }
     CHECK(tester_find("74LS999") < 0, "bogus part found");
 
+    /* a board that only takes 14-pin chips must refuse bigger packages
+     * without ever powering the socket */
+    sim_insert(&s7400); sim_max_pins = 14;
+    {
+        const char *refuse[] = {"ID 16", "TEST 4040", "VEC 0000000G0000000V", "PINS 16"};
+        for (unsigned i = 0; i < sizeof refuse / sizeof *refuse; i++) {
+            char line[64]; strcpy(line, refuse[i]);
+            unsigned before = sim_power_ups;
+            printf("> %s  (14-pin board)\n< ", refuse[i]); fflush(stdout);
+            cmd_exec(line);
+            CHECK(sim_power_ups == before, "'%s' powered the socket on a 14-pin board", refuse[i]);
+        }
+        CHECK(default_pins == 14, "PINS 16 accepted on a 14-pin board");
+        char ok[] = "TEST 7400";
+        unsigned before = sim_power_ups;
+        printf("> %s  (14-pin board)\n< ", ok); fflush(stdout);
+        cmd_exec(ok);
+        CHECK(sim_power_ups > before, "TEST 7400 refused on a 14-pin board");
+    }
+    sim_max_pins = 24;
+
     /* the serial API, as the host sees it */
     puts("\n--- API transcript (sim 7400 inserted) ---");
     sim_insert(&s7400);

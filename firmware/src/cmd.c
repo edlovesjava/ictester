@@ -40,6 +40,15 @@ static void err(const char *msg) { printf_P(PSTR("{\"error\":\"%s\"}\n"), msg); 
 
 static uint8_t valid_pins(int n) { return n == 14 || n == 16 || n == 20 || n == 24; }
 
+/* Refuse packages the board has no pins for; driving them would push the
+ * vectors into whatever is wired to the higher positions. */
+static uint8_t fits(uint8_t n)
+{
+    if (n <= hal_max_pins()) return 1;
+    printf_P(PSTR("{\"error\":\"board supports up to %u pins\"}\n"), hal_max_pins());
+    return 0;
+}
+
 static void result_json(uint8_t idx, const result_t *r)
 {
     chip_t ch; tester_chip(idx, &ch);
@@ -84,6 +93,7 @@ static void cmd_test(const char *part)
     int16_t idx = tester_find(part);
     if (idx < 0) { err("unknown part"); return; }
     chip_t ch; tester_chip(idx, &ch);
+    if (!fits(ch.pins)) return;
     ui_busy(ch.name, ch.pins);
     result_t r;
     tester_run((uint8_t)idx, &r);
@@ -96,6 +106,7 @@ static void cmd_vec(const char *v, int rep)
     uint8_t n = (uint8_t)strlen(v);
     char vv[MAXPINS + 1], act[MAXPINS + 1];
     if (!valid_pins(n)) { err("vector length must be 14/16/20/24"); return; }
+    if (!fits(n)) return;
     for (uint8_t i = 0; i < n; i++) {
         char c = (char)toupper((unsigned char)v[i]);
         if (!strchr("01CLHXGV", c)) { err("bad vector char"); return; }
@@ -155,12 +166,13 @@ void cmd_exec(char *line)
     else if (!strcmp(c, "TEST")) { if (argc < 2) err("TEST <part>"); else cmd_test(argv[1]); }
     else if (!strcmp(c, "ID")) {
         int n = argc > 1 ? atoi(argv[1]) : default_pins;
-        if (!valid_pins(n)) err("pins must be 14/16/20/24"); else cmd_identify((uint8_t)n);
+        if (!valid_pins(n)) err("pins must be 14/16/20/24");
+        else if (fits((uint8_t)n)) cmd_identify((uint8_t)n);
     }
     else if (!strcmp(c, "PINS")) {
         int n = argc > 1 ? atoi(argv[1]) : 0;
         if (!valid_pins(n)) err("pins must be 14/16/20/24");
-        else { default_pins = (uint8_t)n; ui_ready(default_pins); printf_P(PSTR("{\"pins\":%u}\n"), n); }
+        else if (fits((uint8_t)n)) { default_pins = (uint8_t)n; ui_ready(default_pins); printf_P(PSTR("{\"pins\":%u}\n"), n); }
     }
     else if (!strcmp(c, "VEC")) { if (argc < 2) err("VEC <vector> [rep]"); else cmd_vec(argv[1], argc > 2 ? atoi(argv[2]) : 1); }
     else if (!strcmp(c, "OFF")) { tester_power_down(); printf_P(PSTR("{\"powered\":0}\n")); }

@@ -25,4 +25,4 @@ roadmap if it's affected. Never let them drift from what was built.
 
 | Spec | Plan | Status |
 |---|---|---|
-| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | In progress: steps 1–2 done (first gate works) |
+| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | In progress: steps 1–3 done (TEST 7400 passes on the breadboard) |

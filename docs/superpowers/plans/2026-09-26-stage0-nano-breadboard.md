@@ -382,8 +382,8 @@ git push
 **Interfaces:**
 - Produces: `uint8_t hal_max_pins(void);` in `hal.h`: the largest package the board can take (14 for nano0, 24 in the simulation). Test hooks `extern uint8_t sim_max_pins;` (default 24) and `extern unsigned sim_power_ups;` (count of `hal_vcc(1)` calls) in `sim.h`.
 
-- [ ] **Step 1: Baseline.** `cd firmware && make test | tail -1` → `ALL TESTS PASSED (0 failures)`.
-- [ ] **Step 2: Add the interface and sim hooks.** In `src/hal.h`, after `void hal_led(uint8_t on);`:
+- [x] **Step 1: Baseline.** `cd firmware && make test | tail -1` → `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 2: Add the interface and sim hooks.** In `src/hal.h`, after `void hal_led(uint8_t on);`:
 
 ```c
 uint8_t hal_max_pins(void);        /* largest package the board can take: 14..24 */
@@ -400,7 +400,7 @@ In `test/sim_hal.c`: after `int8_t  sim_stuck_pin = 0, sim_stuck_val = 0;` add
 `uint8_t sim_max_pins = 24;` and `unsigned sim_power_ups;`. Change `hal_vcc` to start with
 `if (on) sim_power_ups++;`, and add `uint8_t hal_max_pins(void) { return sim_max_pins; }`.
 
-- [ ] **Step 3: Write the failing test.** In `test/test_main.c`, just before `/* the serial API, as the host sees it */`:
+- [x] **Step 3: Write the failing test.** In `test/test_main.c`, just before `/* the serial API, as the host sees it */`:
 
 ```c
     /* a board that only takes 14-pin chips must refuse bigger packages
@@ -425,8 +425,8 @@ In `test/sim_hal.c`: after `int8_t  sim_stuck_pin = 0, sim_stuck_val = 0;` add
     sim_max_pins = 24;
 ```
 
-- [ ] **Step 4: Run it and watch it fail.** `make test`. Expected: `TESTS FAILED (4 failures)`, for `ID 16`, `TEST 4040`, the `VEC` and `PINS 16`.
-- [ ] **Step 5: Implement the guard in `src/cmd.c`.** After `valid_pins()`:
+- [x] **Step 4: Run it and watch it fail.** `make test`. Expected: `TESTS FAILED (4 failures)`, for `ID 16`, `TEST 4040`, the `VEC` and `PINS 16`.
+- [x] **Step 5: Implement the guard in `src/cmd.c`.** After `valid_pins()`:
 
 ```c
 /* Refuse packages the board has no pins for; driving them would push the
@@ -445,8 +445,8 @@ Then use it in four places:
   - `ID`: `if (!valid_pins(n)) err("pins must be 14/16/20/24"); else if (fits((uint8_t)n)) cmd_identify((uint8_t)n);`
   - `PINS`: `if (!valid_pins(n)) err("pins must be 14/16/20/24"); else if (fits((uint8_t)n)) { default_pins = (uint8_t)n; ui_ready(default_pins); printf_P(PSTR("{\"pins\":%u}\n"), n); }`
 
-- [ ] **Step 6: Run it and watch it pass.** `make test`. Expected: each refused command prints `{"error":"board supports up to 14 pins"}`, then `ALL TESTS PASSED (0 failures)`.
-- [ ] **Step 7: Map the rest of the chip.** In `hal_nano0.c`, make the `zmap` lines read:
+- [x] **Step 6: Run it and watch it pass.** `make test`. Expected: each refused command prints `{"error":"board supports up to 14 pins"}`, then `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 7: Map the rest of the chip.** In `hal_nano0.c`, make the `zmap` lines read:
 
 ```c
     P(D_,2), P(D_,3), P(D_,4), P(D_,5), P(D_,6), P(D_,7), /* ZIF 1-6:  D2-D7 */
@@ -462,13 +462,13 @@ and add at the end of the file:
 uint8_t hal_max_pins(void) { return 14; }
 ```
 
-- [ ] **Step 8: Wire the rest.** Chip pins 4, 5, 6 → 220 Ω → D5, D6, D7. Pins 8–12 → 220 Ω → D8–D12. Pin 13 → 220 Ω → A1.
-- [ ] **Step 9: Build and flash.** `make && make flash PORT=COMx`. Expected: clean build, about 22.2 KB.
-- [ ] **Step 10: Bench check.**
+- [x] **Step 8: Wire the rest.** Chip pins 4, 5, 6 → 220 Ω → D5, D6, D7. Pins 8–12 → 220 Ω → D8–D12. Pin 13 → 220 Ω → A1.
+- [x] **Step 9: Build and flash.** `make && make flash PORT=COMx`. Expected: clean build, about 22.2 KB.
+- [x] **Step 10: Bench check.**
   1. `python ../host/ictester.py test 7400` with the 74LS00 → PASS. Then the same with the 74HC00 → PASS.
   2. Pull the wire at chip pin 11. `python ../host/ictester.py --json test 7400` → `"pass": false` with `"pin": 11`. Put it back → PASS.
   3. `python ../host/ictester.py id --pins 16` → an error: `board supports up to 14 pins`.
-- [ ] **Step 11: Commit** all the files above as "Stage 0 step 3: whole 7400 wired; refuse packages over 14 pins".
+- [x] **Step 11: Commit** all the files above as "Stage 0 step 3: whole 7400 wired; refuse packages over 14 pins".
 
 ---
 

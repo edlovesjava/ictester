@@ -25,13 +25,13 @@ enum { B_, C_, D_ };
 
 static const uint8_t zmap[41] = {
     NONE,
-    P(D_,2), P(D_,3), P(D_,4), NONE, NONE, NONE, /* ZIF 1-6:  D2-D7 (task 3 adds 4-6) */
+    P(D_,2), P(D_,3), P(D_,4), P(D_,5), P(D_,6), P(D_,7), /* ZIF 1-6:  D2-D7 */
     NONE,                                         /* ZIF 7:    GND wire           */
     NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, /* ZIF 8-17  */
     NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, /* ZIF 18-27 */
     NONE, NONE, NONE, NONE, NONE, NONE,          /* ZIF 28-33: unused            */
-    NONE, NONE, NONE, NONE, NONE,                /* ZIF 34-38: D8-D12 (task 3)   */
-    NONE,                                         /* ZIF 39:   A1     (task 3)    */
+    P(B_,0), P(B_,1), P(B_,2), P(B_,3), P(B_,4), /* ZIF 34-38: D8-D12 */
+    P(C_,1),                                      /* ZIF 39:   A1      */
     NONE                                          /* ZIF 40:   VCC, see hal_vcc   */
 };
 
@@ -89,3 +89,4 @@ uint8_t hal_init(void)
     DDRB |= 1 << LED_BIT;
     return 0;                                         /* no MCP23008, no INA219 */
 }
+uint8_t hal_max_pins(void) { return 14; }
