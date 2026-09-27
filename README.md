@@ -15,8 +15,10 @@ catches a reversed chip and gives a rough guess at the logic family.
 firmware/   avr-gcc sources, Makefile (make / make flash / make fuses / make test)
 host/       ictester.py: Python library + CLI for the serial API
 tools/      chips.py (chip database generator), design.py (stage-1 connections), sheets.py / blocks.py / wiring.py
-docs/       stage1/ (Nano schematic sheets + WIRING.md), old-1284p/, chips.txt (every vector)
+docs/       stage1/ (Nano schematic sheets + WIRING.md), old-1284p/, superpowers/ (specs, plans), chips.txt
 ```
+
+Each folder has its own `README.md` indexing what is in it.
 
 ## Quick start
 
