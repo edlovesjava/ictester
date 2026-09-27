@@ -476,11 +476,11 @@ uint8_t hal_max_pins(void) { return 14; }
 
 No code change is expected.
 
-- [ ] **Step 1:** `python ../host/ictester.py id` with the 74LS00 → one match, `7400` (with aliases 7403 7426 7437 7438 74132).
+- [x] **Step 1:** `python ../host/ictester.py id` with the 74LS00 → one match, `7400` (with aliases 7403 7426 7437 7438 74132).
 - [ ] **Step 2:** Feel the chip and the resistors: nothing warm. Then `test 7400` → still PASS (Review Focus 5).
 - [ ] **Step 3:** If a 7402, 7404 or 7408 is on hand, swap it in and run `id`. Expected: it names the new part.
       A 7402 or 7404 puts outputs on different pins, so expect it to fail every other part's vectors rather than match them.
-- [ ] **Step 4:** If anything fails, debug it in this task. If a fix is needed, commit it as "Stage 0 step 4: ...".
+- [x] **Step 4:** If anything fails, debug it in this task. If a fix is needed, commit it as "Stage 0 step 4: ...".
       Otherwise record the result in the spec's status and move on.
 
 ---
