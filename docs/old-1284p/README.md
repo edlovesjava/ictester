@@ -1,8 +1,15 @@
 # docs/old-1284p
 
 The earlier ATmega1284P design: 24 socket pins on direct GPIO, an MCP23008 for power switching, and an
-INA219. **Superseded by [stage1](../stage1/)** and kept only for reference. The firmware's
-`hal_avr.c` still targets this board until the Nano HAL replaces it.
+INA219. **Superseded by [stage1](../stage1/).**
+
+## Rules
+
+- **Frozen.** Don't update these files to match later designs. They record what the 1284P board was.
+- The firmware's `hal_avr.c` still targets this board until the Nano HAL replaces it. After that, this
+  folder is reference only.
+
+## Index
 
 | File | Contents |
 |---|---|
