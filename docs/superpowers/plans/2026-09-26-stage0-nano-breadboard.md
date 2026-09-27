@@ -53,9 +53,9 @@ task: the checks are a clean `-Werror` build, an unchanged `make test`, and the 
 - Consumes: `hal.h` (unchanged in this task), `ui.h`, `cmd.h`, `uart.h`, `config.h`.
 - Produces: `BOARD=nano0` build; `make flash PORT=... [UPLOAD_BAUD=...]`; `make db`. `hal_nano0.c` implements every function in `hal.h`, with a `zmap[41]` table that tasks 2 and 3 fill in. `ui_led.c` implements `ui.h` using `hal_led()`.
 
-- [ ] **Step 1: Baseline.** Run `cd firmware && make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 1: Baseline.** Run `cd firmware && make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
 
-- [ ] **Step 2: Replace `firmware/Makefile`**
+- [x] **Step 2: Replace `firmware/Makefile`**
 
 ```make
 # IC tester firmware -- avr-gcc / avrdude
@@ -135,7 +135,7 @@ Two changes from the old Makefile. The 1284P build and `make fuses` are gone (th
 never touched). The automatic `src/chips_db.c: ../tools/chips.py` rule becomes an explicit `make db`, so a
 fresh clone's file timestamps can't trigger a regeneration.
 
-- [ ] **Step 3: Create `firmware/src/hal_nano0.c`**
+- [x] **Step 3: Create `firmware/src/hal_nano0.c`**
 
 ```c
 /* Stage 0 hardware layer: Arduino Nano (ATmega328P) wired straight to a
@@ -234,7 +234,7 @@ uint8_t hal_init(void)
 VCC control on A0 lands now, although nothing is wired to it until task 2. Tasks 2 and 3 only add
 `zmap` entries.
 
-- [ ] **Step 4: Create `firmware/src/ui_led.c`**
+- [x] **Step 4: Create `firmware/src/ui_led.c`**
 
 ```c
 /* Front panel for boards without an OLED: the status LED is on while a test
@@ -248,7 +248,7 @@ void ui_test_result(uint8_t idx, const result_t *r) { (void)idx; (void)r; hal_le
 void ui_id_result(uint8_t pins, uint8_t nmatch, const uint8_t *first) { (void)pins; (void)nmatch; (void)first; hal_led(0); }
 ```
 
-- [ ] **Step 5: Replace `firmware/src/main.c`**
+- [x] **Step 5: Replace `firmware/src/main.c`**
 
 The 1284P JTAG lines go. The OLED and button code stays, compiled only for boards that define
 `HAVE_PANEL` (none yet; stage 1c brings it back).
@@ -309,7 +309,7 @@ int main(void)
 }
 ```
 
-- [ ] **Step 6: Fix the UART vector name in `firmware/src/uart.c`.** Replace the line `ISR(USART0_RX_vect)` with:
+- [x] **Step 6: Fix the UART vector name in `firmware/src/uart.c`.** Replace the line `ISR(USART0_RX_vect)` with:
 
 ```c
 #ifndef USART0_RX_vect                 /* ATmega328P names its only USART without the 0 */
@@ -319,24 +319,24 @@ int main(void)
 ISR(USART0_RX_vect)
 ```
 
-- [ ] **Step 7: Build.** Run `cd firmware && make`. Expected: no warnings, and `avr-size` reports
+- [x] **Step 7: Build.** Run `cd firmware && make`. Expected: no warnings, and `avr-size` reports
 `Device: atmega328p`, `Program: 22376 bytes (68.3% Full)` (±100 bytes is fine) and `Data: 509 bytes`.
 
-- [ ] **Step 8: PC tests unchanged.** Run `make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 8: PC tests unchanged.** Run `make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
 
-- [ ] **Step 9: Update the READMEs.**
+- [x] **Step 9: Update the READMEs.**
   - `firmware/README.md`: the Makefile row becomes `make` (build, `BOARD=nano0` default), `make flash PORT=COMx [UPLOAD_BAUD=57600]`, `make db`, `make test`, `make sim`, `make clean`.
   - `firmware/src/README.md`: add `hal_nano0.c` (stage 0 Nano, direct GPIO) and `ui_led.c` (LED-only panel) to the hardware-layer table. Mark `hal_avr.c`, `twi.c`, `ssd1306.c`, `font5x7.h` and `ui.c` as *not built for nano0; kept for stage 1*.
   - `README.md` Quick start: replace the USBasp/fuses lines with `cd firmware && make && make flash PORT=COM5`, and use `python` rather than `python3` (Windows).
 
-- [ ] **Step 10: Bench check (Ed).** Plug in the Nano alone, with nothing else wired.
+- [x] **Step 10: Bench check (Ed).** Plug in the Nano alone, with nothing else wired.
   1. Find the port: Device Manager → Ports shows `USB-SERIAL CH340 (COMx)`. If there's no CH340 entry, install the CH340 driver first.
   2. `cd firmware && make flash PORT=COMx`. Expected: avrdude ends `... bytes of flash verified`. If it says `not in sync`, rerun with `UPLOAD_BAUD=57600` and note which one worked in the commit message.
   3. `python ../host/ictester.py --json info`. Expected: a JSON line with `"fw": "1.0"`, `"chips": 50`, `"pins": 14`, `"mcp23008": false`, `"ina219": false`, `"powered": 0`, `"icc_mA": null`. `ictester.py` prints JSON with a space after each colon.
   4. `python ../host/ictester.py raw BOGUS`. Expected: an `unknown command` error.
   5. `python ../host/ictester.py --json test 7400`. Expected: `"pass": false` (nothing is wired yet, so this only proves the command runs end to end).
 
-- [ ] **Step 11: Commit**
+- [x] **Step 11: Commit**
 
 ```bash
 git add firmware/Makefile firmware/src/hal_nano0.c firmware/src/ui_led.c firmware/src/main.c firmware/src/uart.c firmware/README.md firmware/src/README.md README.md
