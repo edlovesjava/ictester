@@ -7,9 +7,9 @@ catches a reversed chip and gives a rough guess at the logic family.
 
 > **Hardware status (2026-09-26):** the current hardware is **stage 1**: an Arduino Nano (328P) driving the chip
 > through two MCP23S17 SPI expanders, with switchable VCC (ZIF 40/1/4/5) and GND (ZIF 7/8/10/12/36/37).
-> Schematic and wiring: `docs/stage1/` (start at `sch-0-blocks.png`). The firmware in `firmware/` still targets
-> the earlier ATmega1284P design (`docs/old-1284p/`); its hardware layer is ported to the Nano next. The test
-> engine, API, chip database and host client carry over unchanged.
+> Schematic and wiring: `docs/stage1/` (start at `sch-0-blocks.png`). The firmware is being brought up on it in
+> steps, starting with **stage 0**: the Nano wired straight to a 7400 on a breadboard (`BOARD=nano0`). Plan and
+> progress: `docs/superpowers/`. The test engine, API, chip database and host client carry over unchanged.
 
 ```
 firmware/   avr-gcc sources, Makefile (make / make flash / make fuses / make test)
@@ -22,14 +22,19 @@ Each folder has its own `README.md` indexing what is in it.
 
 ## Quick start
 
+From a Git Bash terminal, with the Nano on USB (find its `COMx` under Device Manager → Ports, "USB-SERIAL CH340"):
+
 ```
 cd firmware
-make fuses && make flash          # USBasp; override with PROG=... PORT=...
+make && make flash PORT=COM5              # Nanos with the old bootloader: add UPLOAD_BAUD=57600
 pip install pyserial
-python3 ../host/ictester.py id                 # identify the 14-pin chip in the socket
-python3 ../host/ictester.py test 74LS00 CD4013BE
-python3 ../host/ictester.py batch --pins 16    # swap chip, press Enter, repeat
+python ../host/ictester.py info
+python ../host/ictester.py id             # identify the 14-pin chip on the board
+python ../host/ictester.py test 74LS00
+python ../host/ictester.py batch          # swap chip, press Enter, repeat
 ```
+
+Stage 0 (the breadboard Nano) takes 14-pin chips only; larger packages come with stage 1.
 
 On the front panel, a **short press runs ID** and a **long press cycles 14 → 16 → 20 → 24 pins**.
 

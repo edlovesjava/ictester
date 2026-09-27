@@ -1,12 +1,14 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/delay.h>
 #include "config.h"
 #include "hal.h"
 #include "uart.h"
-#include "ssd1306.h"
 #include "cmd.h"
 #include "ui.h"
+
+#ifdef HAVE_PANEL                                 /* OLED + button boards */
+#include <util/delay.h>
+#include "ssd1306.h"
 
 static const uint8_t pin_opts[] = {14, 16, 20, 24};
 
@@ -28,21 +30,24 @@ static void button(void)
     while (!(PINB & (1 << BTN_BIT))) ;
     _delay_ms(30);
 }
+#endif
 
 int main(void)
 {
-    MCUCR = 1 << JTD;                             /* JTAG off (timed: write twice)  */
-    MCUCR = 1 << JTD;                             /* frees PC2-PC5 even if JTAGEN set */
     hal_status = hal_init();
     uart_init();
     sei();
+#ifdef HAVE_PANEL
     oled_init();
+#endif
     ui_ready(default_pins);
     printf_P(PSTR("{\"ready\":true,\"fw\":\"" FW_VERSION "\",\"mcp23008\":%s,\"ina219\":%s}\n"),
              (hal_status & 1) ? "true" : "false", (hal_status & 2) ? "true" : "false");
     for (;;) {
         char *l = uart_getline();
         if (l) cmd_exec(l);
+#ifdef HAVE_PANEL
         button();
+#endif
     }
 }

@@ -7,7 +7,7 @@ simulated tests.
 |---|---|
 | [src/](src/) | Firmware sources |
 | [test/](test/) | Simulated socket and chips for `make test` / `make sim` |
-| [Makefile](Makefile) | `make` (build), `make flash`, `make fuses`, `make test`, `make sim`, `make clean` |
+| [Makefile](Makefile) | `make` (build; `BOARD=nano0` is the default and only board so far), `make flash PORT=COMx [UPLOAD_BAUD=57600]`, `make db` (regenerate the chip DB), `make test`, `make sim`, `make clean` |
 | `build/` | Build output, not tracked |
 
 Build and test instructions are in the top-level [README](../README.md#tests-no-hardware-needed).

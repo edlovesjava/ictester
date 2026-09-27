@@ -9,6 +9,10 @@ static volatile uint8_t rxbuf[RXSZ], rxh, rxt;
 static char line[96];
 static uint8_t llen;
 
+#ifndef USART0_RX_vect                 /* ATmega328P names its only USART without the 0 */
+#define USART0_RX_vect USART_RX_vect
+#endif
+
 ISR(USART0_RX_vect)
 {
     uint8_t c = UDR0, n = (uint8_t)((rxh + 1) % RXSZ);
