@@ -25,4 +25,4 @@ roadmap if it's affected. Never let them drift from what was built.
 
 | Spec | Plan | Status |
 |---|---|---|
-| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | In progress: steps 1–4 done (ID finds the 7400; 5-min soak clean) |
+| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | Paused: steps 1–4 pass on SN74LS00N, SN74LS02N, 74HC00. Left: warmth check (step 4), step 5 (batch swaps), final review, merge to main |
