@@ -10,3 +10,5 @@ typedef struct {
 void sim_insert(const sim_chip_t *c);
 extern int16_t sim_icc;
 extern int8_t sim_stuck_pin, sim_stuck_val;
+extern uint8_t sim_max_pins;          /* what hal_max_pins() reports (default 24) */
+extern unsigned sim_power_ups;        /* hal_vcc(1) calls so far */

@@ -16,10 +16,19 @@ power. It runs from 12 V.
 
 | Stage | Adds | Proven by | Open decisions |
 |---|---|---|---|
-| **0** | Nano wired straight to a 7400 ([spec](specs/2026-09-26-stage0-nano-breadboard-design.md), [plan](plans/2026-09-26-stage0-nano-breadboard.md)) | `TEST` / `ID` of LS00 and HC00, pulled-wire fault | – |
+| **0** ✅ | Nano wired straight to a 7400 ([spec](specs/2026-09-26-stage0-nano-breadboard-design.md), [plan](plans/2026-09-26-stage0-nano-breadboard.md)) | `TEST` / `ID` of LS00 and HC00, pulled-wire fault | – |
 | **1a** | Two MCP23S17s on SPI replace direct GPIO. New `hal_nano1.c` with shadow registers. Pin map generated from `tools/design.py` so firmware, schematic and wiring can't disagree. VCC stays on a direct Nano pin; GND is a jumper moved per package. | Stage 0 checks through one expander, then both. A 16-pin chip (4040: exercises long clock runs) with the GND jumper on ZIF 8. | Generate a C header from `design.py`, or hand-copy the table and test it? |
 | **1b** | Power path: 12 V jack, 7805, BC327 VCC switch on ZIF 40, 2N7000 GND switches on 7/8/10/12, INA219 current sense and trip. | `INFO` shows sensible `icc_mA`/`vbus_mV`. A resistor load trips the limit. A reversed chip is caught by current, not heat. 20- and 24-pin chips. | Support non-standard power pins (VCC on ZIF 1/4/5, GND on 36/37, e.g. 7490)? `hal.h` has no API for it yet. |
 | **1c** | Front panel and socket: OLED, button, 40-pin ZIF. `HAVE_PANEL` build. | Button ID with no PC attached. Reference chip set passes from the ZIF. | – |
+
+**Carried over from the stage 0 review** (code stage 0 doesn't build; fix when the stage that needs it starts):
+
+- **1a:** `hal_avr.c` (the 1284P reference) has no `hal_max_pins()`, and the JTAG-disable writes
+  (`MCUCR = 1 << JTD`, twice) left `main.c` without moving into its `hal_init()`. Fix both if it is used as
+  the starting point for `hal_nano1.c`.
+- **1c:** the button's ID path calls `cmd_identify()` directly and skips the `fits()` pin-count guard, which
+  only the serial commands use. Move the guard into `cmd_identify()` (and the long-press pin cycle) before
+  `HAVE_PANEL` is built.
 
 ## Phase B: perfboard
 

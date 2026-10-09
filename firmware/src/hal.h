@@ -19,3 +19,4 @@ int16_t hal_vbus_mv(void);
 void    hal_delay_us(uint16_t us);
 void    hal_delay_ms(uint16_t ms);
 void    hal_led(uint8_t on);
+uint8_t hal_max_pins(void);        /* largest package the board can take: 14..24 */

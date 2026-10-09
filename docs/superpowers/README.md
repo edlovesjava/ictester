@@ -25,4 +25,4 @@ roadmap if it's affected. Never let them drift from what was built.
 
 | Spec | Plan | Status |
 |---|---|---|
-| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | Spec approved, plan in review |
+| [Stage 0: Nano + 7400 on a breadboard](specs/2026-09-26-stage0-nano-breadboard-design.md) | [plan](plans/2026-09-26-stage0-nano-breadboard.md) | Done (2026-10-08): LS00, HC00, LS02 pass on the breadboard and in a ZIF socket; nothing warm; batch run with a few swaps |

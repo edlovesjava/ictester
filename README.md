@@ -5,14 +5,15 @@ and reports the result on a 128×64 OLED and as JSON over USB-serial. It can **i
 by trying every definition that has the right pin count. It also measures **supply current**, which
 catches a reversed chip and gives a rough guess at the logic family.
 
-> **Hardware status (2026-09-26):** the current hardware is **stage 1**: an Arduino Nano (328P) driving the chip
+> **Hardware status (2026-10-08):** the current hardware is **stage 1**: an Arduino Nano (328P) driving the chip
 > through two MCP23S17 SPI expanders, with switchable VCC (ZIF 40/1/4/5) and GND (ZIF 7/8/10/12/36/37).
-> Schematic and wiring: `docs/stage1/` (start at `sch-0-blocks.png`). The firmware in `firmware/` still targets
-> the earlier ATmega1284P design (`docs/old-1284p/`); its hardware layer is ported to the Nano next. The test
-> engine, API, chip database and host client carry over unchanged.
+> Schematic and wiring: `docs/stage1/` (start at `sch-0-blocks.png`). The firmware is being brought up on it in
+> steps, starting with **stage 0**: the Nano wired straight to a 7400 on a breadboard (`BOARD=nano0`). Stage 0
+> is done: 74LS00, 74HC00 and 74LS02 verified, also through a ZIF socket. Plan and
+> progress: `docs/superpowers/`. The test engine, API, chip database and host client carry over unchanged.
 
 ```
-firmware/   avr-gcc sources, Makefile (make / make flash / make fuses / make test)
+firmware/   avr-gcc sources, Makefile (make / make flash / make db / make test)
 host/       ictester.py: Python library + CLI for the serial API
 tools/      chips.py (chip database generator), design.py (stage-1 connections), sheets.py / blocks.py / wiring.py
 docs/       stage1/ (Nano schematic sheets + WIRING.md), old-1284p/, superpowers/ (specs, plans), chips.txt
@@ -22,16 +23,22 @@ Each folder has its own `README.md` indexing what is in it.
 
 ## Quick start
 
+From a Git Bash terminal, with the Nano on USB (find its `COMx` under Device Manager → Ports, "USB-SERIAL CH340"):
+
 ```
 cd firmware
-make fuses && make flash          # USBasp; override with PROG=... PORT=...
+make && make flash PORT=COM5              # Nanos with the old bootloader: add UPLOAD_BAUD=57600
 pip install pyserial
-python3 ../host/ictester.py id                 # identify the 14-pin chip in the socket
-python3 ../host/ictester.py test 74LS00 CD4013BE
-python3 ../host/ictester.py batch --pins 16    # swap chip, press Enter, repeat
+python ../host/ictester.py info
+python ../host/ictester.py id             # identify the 14-pin chip on the board
+python ../host/ictester.py test 74LS00
+python ../host/ictester.py batch          # swap chip, press Enter, repeat
 ```
 
-On the front panel, a **short press runs ID** and a **long press cycles 14 → 16 → 20 → 24 pins**.
+Stage 0 (the breadboard Nano) takes 14-pin chips only; larger packages come with stage 1.
+
+The front panel (OLED and button: a short press runs ID, a long press cycles 14 → 16 → 20 → 24 pins) is not
+built for stage 0; it returns in stage 1c.
 
 ## Serial API (115200 8N1, one line in, one JSON line out)
 

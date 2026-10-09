@@ -16,12 +16,21 @@ The files split into a portable core and a hardware layer. The core talks to the
 
 ## Hardware layer (AVR only)
 
+Built for `BOARD=nano0` (stage 0):
+
 | File | Purpose |
 |---|---|
-| `hal_avr.c` | `hal.h` for the old ATmega1284P board (direct GPIO, MCP23008, INA219) |
-| `main.c` | Start-up, main loop, front-panel button |
+| `hal_nano0.c` | `hal.h` for stage 0: Nano GPIO wired straight to a 14-pin chip, VCC from A0, LED on D13 |
+| `ui_led.c` | `ui.h` for boards without an OLED: the LED is on while a test or identify runs |
+| `main.c` | Start-up and main loop. OLED and button code only with `HAVE_PANEL` |
 | `config.h` | Clock, baud, I²C addresses, current-trip default, test timing |
 | `uart.c/.h` | Interrupt-driven serial, bound to `stdout` |
-| `twi.c/.h` | I²C master |
+
+Not built for nano0; kept for stage 1:
+
+| File | Purpose |
+|---|---|
+| `hal_avr.c` | `hal.h` for the old ATmega1284P board (direct GPIO, MCP23008, INA219). Reference only. |
+| `twi.c/.h` | I²C master (INA219, OLED) |
 | `ssd1306.c/.h`, `font5x7.h` | Text-only OLED driver and its font |
 | `ui.c` | Front-panel screens on the OLED |

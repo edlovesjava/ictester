@@ -53,9 +53,9 @@ task: the checks are a clean `-Werror` build, an unchanged `make test`, and the 
 - Consumes: `hal.h` (unchanged in this task), `ui.h`, `cmd.h`, `uart.h`, `config.h`.
 - Produces: `BOARD=nano0` build; `make flash PORT=... [UPLOAD_BAUD=...]`; `make db`. `hal_nano0.c` implements every function in `hal.h`, with a `zmap[41]` table that tasks 2 and 3 fill in. `ui_led.c` implements `ui.h` using `hal_led()`.
 
-- [ ] **Step 1: Baseline.** Run `cd firmware && make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 1: Baseline.** Run `cd firmware && make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
 
-- [ ] **Step 2: Replace `firmware/Makefile`**
+- [x] **Step 2: Replace `firmware/Makefile`**
 
 ```make
 # IC tester firmware -- avr-gcc / avrdude
@@ -135,7 +135,7 @@ Two changes from the old Makefile. The 1284P build and `make fuses` are gone (th
 never touched). The automatic `src/chips_db.c: ../tools/chips.py` rule becomes an explicit `make db`, so a
 fresh clone's file timestamps can't trigger a regeneration.
 
-- [ ] **Step 3: Create `firmware/src/hal_nano0.c`**
+- [x] **Step 3: Create `firmware/src/hal_nano0.c`**
 
 ```c
 /* Stage 0 hardware layer: Arduino Nano (ATmega328P) wired straight to a
@@ -234,7 +234,7 @@ uint8_t hal_init(void)
 VCC control on A0 lands now, although nothing is wired to it until task 2. Tasks 2 and 3 only add
 `zmap` entries.
 
-- [ ] **Step 4: Create `firmware/src/ui_led.c`**
+- [x] **Step 4: Create `firmware/src/ui_led.c`**
 
 ```c
 /* Front panel for boards without an OLED: the status LED is on while a test
@@ -248,7 +248,7 @@ void ui_test_result(uint8_t idx, const result_t *r) { (void)idx; (void)r; hal_le
 void ui_id_result(uint8_t pins, uint8_t nmatch, const uint8_t *first) { (void)pins; (void)nmatch; (void)first; hal_led(0); }
 ```
 
-- [ ] **Step 5: Replace `firmware/src/main.c`**
+- [x] **Step 5: Replace `firmware/src/main.c`**
 
 The 1284P JTAG lines go. The OLED and button code stays, compiled only for boards that define
 `HAVE_PANEL` (none yet; stage 1c brings it back).
@@ -309,7 +309,7 @@ int main(void)
 }
 ```
 
-- [ ] **Step 6: Fix the UART vector name in `firmware/src/uart.c`.** Replace the line `ISR(USART0_RX_vect)` with:
+- [x] **Step 6: Fix the UART vector name in `firmware/src/uart.c`.** Replace the line `ISR(USART0_RX_vect)` with:
 
 ```c
 #ifndef USART0_RX_vect                 /* ATmega328P names its only USART without the 0 */
@@ -319,24 +319,24 @@ int main(void)
 ISR(USART0_RX_vect)
 ```
 
-- [ ] **Step 7: Build.** Run `cd firmware && make`. Expected: no warnings, and `avr-size` reports
+- [x] **Step 7: Build.** Run `cd firmware && make`. Expected: no warnings, and `avr-size` reports
 `Device: atmega328p`, `Program: 22376 bytes (68.3% Full)` (±100 bytes is fine) and `Data: 509 bytes`.
 
-- [ ] **Step 8: PC tests unchanged.** Run `make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 8: PC tests unchanged.** Run `make test | tail -1`. Expected: `ALL TESTS PASSED (0 failures)`.
 
-- [ ] **Step 9: Update the READMEs.**
+- [x] **Step 9: Update the READMEs.**
   - `firmware/README.md`: the Makefile row becomes `make` (build, `BOARD=nano0` default), `make flash PORT=COMx [UPLOAD_BAUD=57600]`, `make db`, `make test`, `make sim`, `make clean`.
   - `firmware/src/README.md`: add `hal_nano0.c` (stage 0 Nano, direct GPIO) and `ui_led.c` (LED-only panel) to the hardware-layer table. Mark `hal_avr.c`, `twi.c`, `ssd1306.c`, `font5x7.h` and `ui.c` as *not built for nano0; kept for stage 1*.
   - `README.md` Quick start: replace the USBasp/fuses lines with `cd firmware && make && make flash PORT=COM5`, and use `python` rather than `python3` (Windows).
 
-- [ ] **Step 10: Bench check (Ed).** Plug in the Nano alone, with nothing else wired.
+- [x] **Step 10: Bench check (Ed).** Plug in the Nano alone, with nothing else wired.
   1. Find the port: Device Manager → Ports shows `USB-SERIAL CH340 (COMx)`. If there's no CH340 entry, install the CH340 driver first.
   2. `cd firmware && make flash PORT=COMx`. Expected: avrdude ends `... bytes of flash verified`. If it says `not in sync`, rerun with `UPLOAD_BAUD=57600` and note which one worked in the commit message.
   3. `python ../host/ictester.py --json info`. Expected: a JSON line with `"fw": "1.0"`, `"chips": 50`, `"pins": 14`, `"mcp23008": false`, `"ina219": false`, `"powered": 0`, `"icc_mA": null`. `ictester.py` prints JSON with a space after each colon.
   4. `python ../host/ictester.py raw BOGUS`. Expected: an `unknown command` error.
   5. `python ../host/ictester.py --json test 7400`. Expected: `"pass": false` (nothing is wired yet, so this only proves the command runs end to end).
 
-- [ ] **Step 11: Commit**
+- [x] **Step 11: Commit**
 
 ```bash
 git add firmware/Makefile firmware/src/hal_nano0.c firmware/src/ui_led.c firmware/src/main.c firmware/src/uart.c firmware/README.md firmware/src/README.md README.md
@@ -352,22 +352,22 @@ git push
 
 **Interfaces:** Consumes the `zmap` table and `P()` / `D_` from task 1. Produces nothing new.
 
-- [ ] **Step 1: Wire it.** On the breadboard: 74LS00 (or 74HC00) with pin 1 → 220 Ω → D2, pin 2 → 220 Ω → D3,
+- [x] **Step 1: Wire it.** On the breadboard: 74LS00 (or 74HC00) with pin 1 → 220 Ω → D2, pin 2 → 220 Ω → D3,
   pin 3 → 220 Ω → D4, pin 7 → Nano GND, pin 14 → A0, 100 nF from pin 14 to pin 7. Leave pins 4–6 and 8–13 unconnected.
-- [ ] **Step 2: Map ZIF 1–3.** In `zmap`, change the ZIF 1–6 line to:
+- [x] **Step 2: Map ZIF 1–3.** In `zmap`, change the ZIF 1–6 line to:
 
 ```c
     P(D_,2), P(D_,3), P(D_,4), NONE, NONE, NONE, /* ZIF 1-6:  D2-D7 (task 3 adds 4-6) */
 ```
 
-- [ ] **Step 3: Build and flash.** `cd firmware && make && make flash PORT=COMx`
-- [ ] **Step 4: Bench check.**
+- [x] **Step 3: Build and flash.** `cd firmware && make && make flash PORT=COMx`
+- [x] **Step 4: Bench check.**
   1. `python ../host/ictester.py --json vec 00HXXXGXXXXXXV`. Expected: `"match": true`.
   2. `python ../host/ictester.py --json vec 11LXXXGXXXXXXV`. Expected: `"match": true`.
   3. `python ../host/ictester.py --json vec 11HXXXGXXXXXXV`. Expected: `"match": false`, and `"read"` shows `L` in the third position. This proves a wrong expectation is caught.
   4. Straight after 2 (the chip stays powered after `VEC`): meter chip pin 14 to pin 7 ≈ 4.8 V, and pin 3 to pin 7 below 0.5 V.
   5. `python ../host/ictester.py raw OFF`, then meter pin 14 to pin 7 ≈ 0 V.
-- [ ] **Step 5: Commit** `hal_nano0.c` as "Stage 0 step 2: first 7400 gate on the breadboard".
+- [x] **Step 5: Commit** `hal_nano0.c` as "Stage 0 step 2: first 7400 gate on the breadboard".
 
 ---
 
@@ -382,8 +382,8 @@ git push
 **Interfaces:**
 - Produces: `uint8_t hal_max_pins(void);` in `hal.h`: the largest package the board can take (14 for nano0, 24 in the simulation). Test hooks `extern uint8_t sim_max_pins;` (default 24) and `extern unsigned sim_power_ups;` (count of `hal_vcc(1)` calls) in `sim.h`.
 
-- [ ] **Step 1: Baseline.** `cd firmware && make test | tail -1` → `ALL TESTS PASSED (0 failures)`.
-- [ ] **Step 2: Add the interface and sim hooks.** In `src/hal.h`, after `void hal_led(uint8_t on);`:
+- [x] **Step 1: Baseline.** `cd firmware && make test | tail -1` → `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 2: Add the interface and sim hooks.** In `src/hal.h`, after `void hal_led(uint8_t on);`:
 
 ```c
 uint8_t hal_max_pins(void);        /* largest package the board can take: 14..24 */
@@ -400,7 +400,7 @@ In `test/sim_hal.c`: after `int8_t  sim_stuck_pin = 0, sim_stuck_val = 0;` add
 `uint8_t sim_max_pins = 24;` and `unsigned sim_power_ups;`. Change `hal_vcc` to start with
 `if (on) sim_power_ups++;`, and add `uint8_t hal_max_pins(void) { return sim_max_pins; }`.
 
-- [ ] **Step 3: Write the failing test.** In `test/test_main.c`, just before `/* the serial API, as the host sees it */`:
+- [x] **Step 3: Write the failing test.** In `test/test_main.c`, just before `/* the serial API, as the host sees it */`:
 
 ```c
     /* a board that only takes 14-pin chips must refuse bigger packages
@@ -425,8 +425,8 @@ In `test/sim_hal.c`: after `int8_t  sim_stuck_pin = 0, sim_stuck_val = 0;` add
     sim_max_pins = 24;
 ```
 
-- [ ] **Step 4: Run it and watch it fail.** `make test`. Expected: `TESTS FAILED (4 failures)`, for `ID 16`, `TEST 4040`, the `VEC` and `PINS 16`.
-- [ ] **Step 5: Implement the guard in `src/cmd.c`.** After `valid_pins()`:
+- [x] **Step 4: Run it and watch it fail.** `make test`. Expected: `TESTS FAILED (4 failures)`, for `ID 16`, `TEST 4040`, the `VEC` and `PINS 16`.
+- [x] **Step 5: Implement the guard in `src/cmd.c`.** After `valid_pins()`:
 
 ```c
 /* Refuse packages the board has no pins for; driving them would push the
@@ -445,8 +445,8 @@ Then use it in four places:
   - `ID`: `if (!valid_pins(n)) err("pins must be 14/16/20/24"); else if (fits((uint8_t)n)) cmd_identify((uint8_t)n);`
   - `PINS`: `if (!valid_pins(n)) err("pins must be 14/16/20/24"); else if (fits((uint8_t)n)) { default_pins = (uint8_t)n; ui_ready(default_pins); printf_P(PSTR("{\"pins\":%u}\n"), n); }`
 
-- [ ] **Step 6: Run it and watch it pass.** `make test`. Expected: each refused command prints `{"error":"board supports up to 14 pins"}`, then `ALL TESTS PASSED (0 failures)`.
-- [ ] **Step 7: Map the rest of the chip.** In `hal_nano0.c`, make the `zmap` lines read:
+- [x] **Step 6: Run it and watch it pass.** `make test`. Expected: each refused command prints `{"error":"board supports up to 14 pins"}`, then `ALL TESTS PASSED (0 failures)`.
+- [x] **Step 7: Map the rest of the chip.** In `hal_nano0.c`, make the `zmap` lines read:
 
 ```c
     P(D_,2), P(D_,3), P(D_,4), P(D_,5), P(D_,6), P(D_,7), /* ZIF 1-6:  D2-D7 */
@@ -462,13 +462,13 @@ and add at the end of the file:
 uint8_t hal_max_pins(void) { return 14; }
 ```
 
-- [ ] **Step 8: Wire the rest.** Chip pins 4, 5, 6 → 220 Ω → D5, D6, D7. Pins 8–12 → 220 Ω → D8–D12. Pin 13 → 220 Ω → A1.
-- [ ] **Step 9: Build and flash.** `make && make flash PORT=COMx`. Expected: clean build, about 22.2 KB.
-- [ ] **Step 10: Bench check.**
+- [x] **Step 8: Wire the rest.** Chip pins 4, 5, 6 → 220 Ω → D5, D6, D7. Pins 8–12 → 220 Ω → D8–D12. Pin 13 → 220 Ω → A1.
+- [x] **Step 9: Build and flash.** `make && make flash PORT=COMx`. Expected: clean build, about 22.2 KB.
+- [x] **Step 10: Bench check.**
   1. `python ../host/ictester.py test 7400` with the 74LS00 → PASS. Then the same with the 74HC00 → PASS.
   2. Pull the wire at chip pin 11. `python ../host/ictester.py --json test 7400` → `"pass": false` with `"pin": 11`. Put it back → PASS.
   3. `python ../host/ictester.py id --pins 16` → an error: `board supports up to 14 pins`.
-- [ ] **Step 11: Commit** all the files above as "Stage 0 step 3: whole 7400 wired; refuse packages over 14 pins".
+- [x] **Step 11: Commit** all the files above as "Stage 0 step 3: whole 7400 wired; refuse packages over 14 pins".
 
 ---
 
@@ -476,20 +476,21 @@ uint8_t hal_max_pins(void) { return 14; }
 
 No code change is expected.
 
-- [ ] **Step 1:** `python ../host/ictester.py id` with the 74LS00 → one match, `7400` (with aliases 7403 7426 7437 7438 74132).
-- [ ] **Step 2:** Feel the chip and the resistors: nothing warm. Then `test 7400` → still PASS (Review Focus 5).
-- [ ] **Step 3:** If a 7402, 7404 or 7408 is on hand, swap it in and run `id`. Expected: it names the new part.
+- [x] **Step 1:** `python ../host/ictester.py id` with the 74LS00 → one match, `7400` (with aliases 7403 7426 7437 7438 74132).
+- [x] **Step 2:** Feel the chip and the resistors: nothing warm. Then `test 7400` → still PASS (Review Focus 5).
+- [x] **Step 3:** If a 7402, 7404 or 7408 is on hand, swap it in and run `id`. Expected: it names the new part.
       A 7402 or 7404 puts outputs on different pins, so expect it to fail every other part's vectors rather than match them.
-- [ ] **Step 4:** If anything fails, debug it in this task. If a fix is needed, commit it as "Stage 0 step 4: ...".
+- [x] **Step 4:** If anything fails, debug it in this task. If a fix is needed, commit it as "Stage 0 step 4: ...".
       Otherwise record the result in the spec's status and move on.
 
 ---
 
 ### Task 5: Host workflow
 
-- [ ] **Step 1:** `python ../host/ictester.py test 74LS00 74HC00` (with either chip in) → both names resolve to 7400 and both runs PASS against the chip in the socket.
-- [ ] **Step 2:** `python ../host/ictester.py batch`. Swap between the LS00 and the HC00 ten times, pressing Enter after each swap, with the USB left connected throughout. Expected: every run identifies 7400, with no timeouts or garbled lines.
+- [x] **Step 1:** `python ../host/ictester.py test 74LS00 74HC00` (with either chip in) → both names resolve to 7400 and both runs PASS against the chip in the socket.
+- [x] **Step 2:** `python ../host/ictester.py batch`. Swap between the LS00 and the HC00 ten times, pressing Enter after each swap, with the USB left connected throughout. Expected: every run identifies 7400, with no timeouts or garbled lines.
       The chip is only powered while a command runs, so swapping between commands is safe.
-- [ ] **Step 3:** Fix whatever the real board shows up, test-first in `test/` when the fix is in the portable core.
-- [ ] **Step 4:** Mark the spec *Done* in `docs/superpowers/README.md`, update the README's hardware status line
+      Result (2026-10-08): a few swaps rather than ten, all identified 7400; accepted as enough.
+- [x] **Step 3:** Fix whatever the real board shows up, test-first in `test/` when the fix is in the portable core.
+- [x] **Step 4:** Mark the spec *Done* in `docs/superpowers/README.md`, update the README's hardware status line
       ("stage 0 works on a breadboard"), and commit as "Stage 0 done: Nano + 7400 breadboard verified".
