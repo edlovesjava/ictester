@@ -477,7 +477,7 @@ uint8_t hal_max_pins(void) { return 14; }
 No code change is expected.
 
 - [x] **Step 1:** `python ../host/ictester.py id` with the 74LS00 → one match, `7400` (with aliases 7403 7426 7437 7438 74132).
-- [ ] **Step 2:** Feel the chip and the resistors: nothing warm. Then `test 7400` → still PASS (Review Focus 5).
+- [x] **Step 2:** Feel the chip and the resistors: nothing warm. Then `test 7400` → still PASS (Review Focus 5).
 - [x] **Step 3:** If a 7402, 7404 or 7408 is on hand, swap it in and run `id`. Expected: it names the new part.
       A 7402 or 7404 puts outputs on different pins, so expect it to fail every other part's vectors rather than match them.
 - [x] **Step 4:** If anything fails, debug it in this task. If a fix is needed, commit it as "Stage 0 step 4: ...".
@@ -487,7 +487,7 @@ No code change is expected.
 
 ### Task 5: Host workflow
 
-- [ ] **Step 1:** `python ../host/ictester.py test 74LS00 74HC00` (with either chip in) → both names resolve to 7400 and both runs PASS against the chip in the socket.
+- [x] **Step 1:** `python ../host/ictester.py test 74LS00 74HC00` (with either chip in) → both names resolve to 7400 and both runs PASS against the chip in the socket.
 - [ ] **Step 2:** `python ../host/ictester.py batch`. Swap between the LS00 and the HC00 ten times, pressing Enter after each swap, with the USB left connected throughout. Expected: every run identifies 7400, with no timeouts or garbled lines.
       The chip is only powered while a command runs, so swapping between commands is safe.
 - [ ] **Step 3:** Fix whatever the real board shows up, test-first in `test/` when the fix is in the portable core.
