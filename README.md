@@ -5,10 +5,11 @@ and reports the result on a 128×64 OLED and as JSON over USB-serial. It can **i
 by trying every definition that has the right pin count. It also measures **supply current**, which
 catches a reversed chip and gives a rough guess at the logic family.
 
-> **Hardware status (2026-09-26):** the current hardware is **stage 1**: an Arduino Nano (328P) driving the chip
+> **Hardware status (2026-10-08):** the current hardware is **stage 1**: an Arduino Nano (328P) driving the chip
 > through two MCP23S17 SPI expanders, with switchable VCC (ZIF 40/1/4/5) and GND (ZIF 7/8/10/12/36/37).
 > Schematic and wiring: `docs/stage1/` (start at `sch-0-blocks.png`). The firmware is being brought up on it in
-> steps, starting with **stage 0**: the Nano wired straight to a 7400 on a breadboard (`BOARD=nano0`). Plan and
+> steps, starting with **stage 0**: the Nano wired straight to a 7400 on a breadboard (`BOARD=nano0`). Stage 0
+> is done: 74LS00, 74HC00 and 74LS02 verified, also through a ZIF socket. Plan and
 > progress: `docs/superpowers/`. The test engine, API, chip database and host client carry over unchanged.
 
 ```

@@ -488,8 +488,9 @@ No code change is expected.
 ### Task 5: Host workflow
 
 - [x] **Step 1:** `python ../host/ictester.py test 74LS00 74HC00` (with either chip in) → both names resolve to 7400 and both runs PASS against the chip in the socket.
-- [ ] **Step 2:** `python ../host/ictester.py batch`. Swap between the LS00 and the HC00 ten times, pressing Enter after each swap, with the USB left connected throughout. Expected: every run identifies 7400, with no timeouts or garbled lines.
+- [x] **Step 2:** `python ../host/ictester.py batch`. Swap between the LS00 and the HC00 ten times, pressing Enter after each swap, with the USB left connected throughout. Expected: every run identifies 7400, with no timeouts or garbled lines.
       The chip is only powered while a command runs, so swapping between commands is safe.
-- [ ] **Step 3:** Fix whatever the real board shows up, test-first in `test/` when the fix is in the portable core.
-- [ ] **Step 4:** Mark the spec *Done* in `docs/superpowers/README.md`, update the README's hardware status line
+      Result (2026-10-08): a few swaps rather than ten, all identified 7400; accepted as enough.
+- [x] **Step 3:** Fix whatever the real board shows up, test-first in `test/` when the fix is in the portable core.
+- [x] **Step 4:** Mark the spec *Done* in `docs/superpowers/README.md`, update the README's hardware status line
       ("stage 0 works on a breadboard"), and commit as "Stage 0 done: Nano + 7400 breadboard verified".
