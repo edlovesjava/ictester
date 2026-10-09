@@ -13,7 +13,7 @@ catches a reversed chip and gives a rough guess at the logic family.
 > progress: `docs/superpowers/`. The test engine, API, chip database and host client carry over unchanged.
 
 ```
-firmware/   avr-gcc sources, Makefile (make / make flash / make fuses / make test)
+firmware/   avr-gcc sources, Makefile (make / make flash / make db / make test)
 host/       ictester.py: Python library + CLI for the serial API
 tools/      chips.py (chip database generator), design.py (stage-1 connections), sheets.py / blocks.py / wiring.py
 docs/       stage1/ (Nano schematic sheets + WIRING.md), old-1284p/, superpowers/ (specs, plans), chips.txt
@@ -37,7 +37,8 @@ python ../host/ictester.py batch          # swap chip, press Enter, repeat
 
 Stage 0 (the breadboard Nano) takes 14-pin chips only; larger packages come with stage 1.
 
-On the front panel, a **short press runs ID** and a **long press cycles 14 → 16 → 20 → 24 pins**.
+The front panel (OLED and button: a short press runs ID, a long press cycles 14 → 16 → 20 → 24 pins) is not
+built for stage 0; it returns in stage 1c.
 
 ## Serial API (115200 8N1, one line in, one JSON line out)
 

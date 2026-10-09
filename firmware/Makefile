@@ -50,18 +50,22 @@ flash: build/ictester.hex
 	@test -n "$(PORT)" || { echo "Set PORT, e.g. make flash PORT=COM5"; exit 1; }
 	avrdude -c arduino -p $(PART) -P $(PORT) -b $(UPLOAD_BAUD) -D -U flash:w:$<:i
 
+# The chip DB is generated: rebuilt whenever tools/chips.py changes
+src/chips_db.c: ../tools/chips.py
+	cd .. && $(PYTHON) tools/chips.py
+
 db:
 	cd .. && $(PYTHON) tools/chips.py
 
 # Host-side engine tests: real tester.c + cmd.c + chip DB against simulated chips
-test:
+test: src/chips_db.c
 	mkdir -p build
 	$(HOSTENV) $(HOSTCC) -std=gnu11 -Wall -Wextra -Werror -Isrc -o build/host_test \
 	   test/test_main.c test/sim_hal.c src/tester.c src/cmd.c src/chips_db.c
 	$(HOSTENV) ./build/host_test
 
 # Simulated board on stdin/stdout (sim 7400) for exercising the serial API without hardware
-sim:
+sim: src/chips_db.c
 	mkdir -p build
 	$(HOSTENV) $(HOSTCC) -std=gnu11 -Wall -Isrc -o build/fake_board test/fake_board.c test/sim_hal.c src/tester.c src/cmd.c src/chips_db.c
 
